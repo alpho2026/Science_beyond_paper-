@@ -109,6 +109,8 @@
         <a href="#landscape" class="hover:text-brand-terracotta transition-colors">The Urgency</a>
         <a href="#ecosystem" class="hover:text-brand-terracotta transition-colors">Interdisciplinary Bridge</a>
         <a href="#transformation" class="hover:text-brand-terracotta transition-colors">Before & After</a>
+        <a href="#articles" class="hover:text-brand-terracotta transition-colors">Articles & Essays</a>
+        <a href="#films" class="hover:text-brand-terracotta transition-colors">Documentaries</a>
         <a href="#movement" class="hover:text-brand-terracotta transition-colors">Capacity Building</a>
         <a href="#manifesto" class="hover:text-brand-terracotta transition-colors">5-Min Pitch</a>
       </div>
@@ -132,6 +134,8 @@
       <a href="#landscape" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">The Urgency</a>
       <a href="#ecosystem" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Interdisciplinary Bridge</a>
       <a href="#transformation" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Paper to Public</a>
+      <a href="#articles" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Articles & Essays</a>
+      <a href="#films" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Documentary Films</a>
       <a href="#movement" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Capacity Building</a>
       <a href="#manifesto" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">5-Min Manifesto</a>
       <a href="#join" class="inline-block w-full text-center px-5 py-3 rounded-full text-sm font-semibold bg-brand-navy text-white hover:bg-brand-terracotta transition-all" onclick="closeMenu()">Join the Movement</a>
@@ -141,11 +145,15 @@
   <header class="relative pt-12 pb-24 md:pt-20 md:pb-32 editorial-gradient overflow-hidden border-b border-brand-lightBorder/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <!-- Top Tagline -->
-      <div class="flex items-center gap-2 mb-6">
+      <!-- Top Tagline & Author Byline -->
+      <div class="flex flex-wrap items-center gap-3 mb-6">
         <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium tracking-wide bg-brand-terracotta/10 text-brand-terracotta border border-brand-terracotta/20">
           <span class="w-2 h-2 rounded-full bg-brand-terracotta animate-pulse"></span>
           A Call to Action in Global Health
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-brand-navy text-brand-cream border border-brand-navy/30">
+          <i data-lucide="feather" class="w-3.5 h-3.5 text-brand-amber"></i>
+          By Alphonce Oyugi
         </span>
         <span class="text-xs font-medium text-slate-500 hidden sm:inline-block">Evidence • Rigor • Public Impact</span>
       </div>
@@ -167,7 +175,7 @@
               <i data-lucide="compass" class="w-4 h-4"></i> Core Thesis
             </div>
             <p class="text-base sm:text-lg text-brand-navy font-medium leading-relaxed">
-              "Producing good evidence is no longer enough. We must become vastly better at communicating <span class="underline decoration-brand-terracotta decoration-2 underline-offset-4">why that evidence matters</span>—and who it protects. - Alphonce Oyugi"
+              "Producing good evidence is no longer enough. We must become vastly better at communicating <span class="underline decoration-brand-terracotta decoration-2 underline-offset-4">why that evidence matters</span>—and who it protects."
             </p>
           </div>
 
@@ -450,131 +458,336 @@
     </div>
   </section>
 
-  <section id="transformation" class="py-24 bg-white border-b border-brand-lightBorder">
+  <section id="articles" class="py-24 bg-white border-b border-brand-lightBorder">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-terracotta block mb-2">Interactive Showcase</span>
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-terracotta">Published & Perspective Writing</span>
+            <span class="text-xs font-mono text-slate-400">• By Alphonce Oyugi</span>
+          </div>
           <h2 class="font-serif text-4xl sm:text-5xl text-brand-navy tracking-tight">
-            From The Paper to The Public
+            Articles & Analytical Essays
           </h2>
-          <p class="mt-3 text-slate-600 max-w-xl">
-            See how dry academic manuscripts are reinvented without losing a shred of scientific credibility. Select a study below:
+          <p class="mt-3 text-slate-600">
+            Critical perspectives examining the translation of scientific data, equitable health financing, maternal well-being, and public accountability.
           </p>
         </div>
 
-        <!-- Case Study Selector Tabs -->
-        <div class="mt-6 md:mt-0 flex gap-2 bg-brand-cream p-1.5 rounded-xl border border-brand-lightBorder self-start md:self-auto">
-          <button id="tabVaccine" onclick="switchCase('vaccine')" class="px-4 py-2 text-xs font-semibold rounded-lg bg-brand-navy text-white transition shadow-sm">
-            Case 1: Vaccine Logistics
-          </button>
-          <button id="tabMaternal" onclick="switchCase('maternal')" class="px-4 py-2 text-xs font-semibold rounded-lg text-slate-600 hover:text-brand-navy transition">
-            Case 2: Maternal Survival
-          </button>
+        <!-- Filter Tags -->
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+          <button onclick="filterArticles('all')" class="article-filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-navy text-white transition" data-filter="all">All</button>
+          <button onclick="filterArticles('translation')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="translation">Translation</button>
+          <button onclick="filterArticles('policy')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="policy">Policy & Funding</button>
+          <button onclick="filterArticles('maternal')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="maternal">Maternal Health</button>
         </div>
       </div>
 
-      <!-- Live Comparison Card -->
-      <div class="bg-brand-cream rounded-3xl border border-brand-lightBorder overflow-hidden shadow-card">
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articlesGrid">
         
-        <!-- Header Info Bar -->
-        <div class="px-6 py-4 bg-white border-b border-brand-lightBorder flex flex-wrap items-center justify-between gap-4">
-          <div class="flex items-center gap-3">
-            <span class="w-3 h-3 rounded-full bg-brand-terracotta"></span>
-            <span id="caseTitle" class="font-semibold text-brand-navy text-sm md:text-base">
-              Study: "Multivariate Regression Analysis of Last-Mile Cold Chain Temperature Deviations"
-            </span>
+        <!-- Article 1 -->
+        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
+              <span class="px-2.5 py-1 rounded bg-brand-terracotta/10 text-brand-terracotta font-semibold">Science Communication</span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
+              The Peer-Review Ivory Tower: Why Breakthrough Data Dies in Silence
+            </h3>
+            <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
+              When researchers celebrate a publication in a closed high-impact journal while the clinics 20 miles away operate on five-year-old misinformation, the system has failed its moral contract.
+            </p>
           </div>
-          <div class="flex items-center gap-2 text-xs font-mono text-slate-500">
-            <span class="px-2.5 py-1 rounded bg-slate-100">Peer Reviewed</span>
-            <span>→</span>
-            <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 font-semibold">Science Beyond The Paper Output</span>
+          <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-500">By Alphonce Oyugi</span>
+            <button onclick="openArticleModal('peer-review')" class="text-xs font-semibold text-brand-navy hover:text-brand-terracotta flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              <span>Read Essay</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="policy">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
+              <span class="px-2.5 py-1 rounded bg-amber-500/10 text-brand-amber font-semibold">Health Economics</span>
+              <span>10 min read</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
+              Beyond the Line Item: The True Arithmetic of Global Health Subsidies
+            </h3>
+            <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
+              A dissection of donor budgetary cycles. Reducing life-saving regional supply chains to sterile spreadsheet line items obscures the human cascade of preventable mortalities.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-500">By Alphonce Oyugi</span>
+            <button onclick="openArticleModal('line-item')" class="text-xs font-semibold text-brand-navy hover:text-brand-terracotta flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              <span>Read Essay</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="maternal">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
+              <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-700 font-semibold">Maternal Survival</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
+              Numbers with Heartbeats: Re-centering Dignity in Obstetric Care Metrics
+            </h3>
+            <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
+              Postpartum hemorrhage statistics often obscure the systemic barriers mothers face at community triage points. How transparent data sharing saves lives before labor begins.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-500">By Alphonce Oyugi</span>
+            <button onclick="openArticleModal('maternal-dignity')" class="text-xs font-semibold text-brand-navy hover:text-brand-terracotta flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              <span>Read Essay</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
+              <span class="px-2.5 py-1 rounded bg-brand-accent/10 text-brand-accent font-semibold">Digital Literacy</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
+              The AI Synthesis Mirage: Guarding Epidemiological Truth Against Algorithmic Hallucination
+            </h3>
+            <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
+              As large language models summarize clinical studies into snappy bullet points, subtle statistical power caveats evaporate. We require scientists who narrate the caveats themselves.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-500">By Alphonce Oyugi</span>
+            <button onclick="openArticleModal('ai-mirage')" class="text-xs font-semibold text-brand-navy hover:text-brand-terracotta flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              <span>Read Essay</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="policy">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
+              <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-700 font-semibold">Civic Engagement</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
+              When the Public Comprehends, Legislation Shifts
+            </h3>
+            <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
+              Case histories showing how plain-language visual summaries turned dusty epidemiology monographs into enforceable clean water municipal mandates.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-500">By Alphonce Oyugi</span>
+            <button onclick="openArticleModal('legislation')" class="text-xs font-semibold text-brand-navy hover:text-brand-terracotta flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              <span>Read Essay</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
+              <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-700 font-semibold">Curated Manifesto</span>
+              <span>9 min read</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
+              The Researcher as Public Citizen: Unlearning Academic Detachment
+            </h3>
+            <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
+              Scientific objectivity does not require communicative paralysis. A guide for scientists stepping onto public stages without compromising their analytical integrity.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-500">By Alphonce Oyugi</span>
+            <button onclick="openArticleModal('public-citizen')" class="text-xs font-semibold text-brand-navy hover:text-brand-terracotta flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              <span>Read Essay</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="films" class="py-24 bg-brand-slate text-white border-b border-slate-800 relative overflow-hidden">
+    <!-- Subdued decorative glow -->
+    <div class="absolute -right-32 top-1/4 w-96 h-96 rounded-full bg-brand-terracotta/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute -left-32 bottom-1/4 w-96 h-96 rounded-full bg-brand-accent/10 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-amber">Curated Science Media</span>
+            <span class="text-xs font-mono text-slate-400">• Science & Documentary Showcases</span>
+          </div>
+          <h2 class="font-serif text-4xl sm:text-5xl text-brand-cream tracking-tight">
+            Documentaries & Visual Science
+          </h2>
+          <p class="mt-3 text-slate-300">
+            Translating complex epidemiological trials into cinematic narratives. Highlighting frontline clinicians, laboratory innovators, and resilient communities.
+          </p>
+        </div>
+
+        <div class="mt-6 md:mt-0 flex items-center gap-2 text-xs font-mono text-slate-400">
+          <i data-lucide="film" class="w-4 h-4 text-brand-amber"></i>
+          <span>Curated by Alphonce Oyugi & Creative Collaborators</span>
+        </div>
+      </div>
+
+      <!-- Film Showcase Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Film 1 -->
+        <div class="bg-brand-dark rounded-3xl overflow-hidden border border-slate-700/70 hover:border-brand-terracotta/50 transition-all hover:shadow-glow flex flex-col justify-between group">
+          <div class="relative aspect-video bg-gradient-to-tr from-slate-900 to-slate-800 overflow-hidden cursor-pointer" onclick="playFilmModal('cold-chain')">
+            <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
+            
+            <div class="absolute top-4 left-4">
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono uppercase bg-brand-terracotta text-white font-semibold">Short Documentary</span>
+            </div>
+            <div class="absolute top-4 right-4 text-xs font-mono bg-black/60 px-2 py-0.5 rounded text-slate-300">
+              18 min
+            </div>
+
+            <!-- Play Button Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-brand-terracotta/90 group-hover:bg-brand-terracotta text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-all">
+                <i data-lucide="play" class="w-6 h-6 fill-current ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl text-white group-hover:text-brand-amber transition-colors mb-2">
+                The Cold Trail: Inside the Sub-Zero Race
+              </h3>
+              <p class="text-xs text-slate-400 font-mono mb-3">Field Production • Kenya & Uganda Field Trials</p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                Follows mobile cold-chain couriers transporting fragile biologic titers across unpaved savannah roads, examining the engineering feats protecting infant immunizations.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 text-xs flex items-center justify-between text-slate-400">
+              <span class="font-mono text-emerald-400 flex items-center gap-1">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Based on 2024 Logistics Study
+              </span>
+              <button onclick="playFilmModal('cold-chain')" class="text-white hover:text-brand-terracotta font-semibold flex items-center gap-1">
+                <span>Watch</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- Split Grid (Before vs After) -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-brand-lightBorder">
-          
-          <!-- LEFT: Before (Academic Paper) -->
-          <div class="p-8 sm:p-10 bg-slate-50/60 flex flex-col justify-between space-y-6">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full text-[11px] font-mono uppercase bg-slate-200 text-slate-700 font-semibold flex items-center gap-1.5">
-                  <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Traditional Journal Publication
-                </span>
-                <span class="text-xs font-mono text-slate-400">Published: The Lancet Dev.</span>
-              </div>
-
-              <h4 id="academicHeadline" class="font-serif text-xl sm:text-2xl text-slate-800 font-medium mb-4 leading-snug">
-                "Evaluating Ambient Heat Stress on Attenuation of Lyophilized Measles-Rubella Antigens in Semi-Arid Sub-Saharan Corridors"
-              </h4>
-
-              <div id="academicSnippet" class="p-4 rounded-xl bg-white border border-slate-200 text-xs text-slate-600 font-mono leading-relaxed space-y-2">
-                <p><strong>Abstract Extract:</strong> Using Cox proportional hazards modeling (HR 1.84, 95% CI 1.32–2.56, p < 0.001), cold storage outages exceeding 3.5 hours corresponded to a 41.2% decrement in viable titer retention across tertiary depots (n=142).</p>
-                <p class="text-slate-400"><em>Keywords: cold-chain, isotherm decay, log-likelihood, logistical attrition...</em></p>
-              </div>
+        <!-- Film 2 -->
+        <div class="bg-brand-dark rounded-3xl overflow-hidden border border-slate-700/70 hover:border-brand-terracotta/50 transition-all hover:shadow-glow flex flex-col justify-between group">
+          <div class="relative aspect-video bg-gradient-to-tr from-slate-900 to-slate-800 overflow-hidden cursor-pointer" onclick="playFilmModal('first-breath')">
+            <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
+            
+            <div class="absolute top-4 left-4">
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono uppercase bg-brand-accent text-white font-semibold">Investigative Feature</span>
+            </div>
+            <div class="absolute top-4 right-4 text-xs font-mono bg-black/60 px-2 py-0.5 rounded text-slate-300">
+              26 min
             </div>
 
-            <!-- Critique Footer -->
-            <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-200/60 text-xs text-amber-900 space-y-1">
-              <span class="font-bold flex items-center gap-1.5 text-amber-800">
-                <i data-lucide="x-circle" class="w-4 h-4 text-amber-600"></i> The Public Barrier:
-              </span>
-              <p>Dense technical jargon, inaccessible subscription paywall, zeroes out community emotional buy-in, and offers no immediate guidance for regional ministers.</p>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-brand-accent/90 group-hover:bg-brand-accent text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-all">
+                <i data-lucide="play" class="w-6 h-6 fill-current ml-0.5"></i>
+              </div>
             </div>
           </div>
 
-          <!-- RIGHT: After (Public Translation) -->
-          <div class="p-8 sm:p-10 bg-white flex flex-col justify-between space-y-6">
+          <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full text-[11px] font-mono uppercase bg-brand-terracotta/15 text-brand-terracotta font-semibold flex items-center gap-1.5">
-                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Science Beyond The Paper Deliverable
-                </span>
-                <span class="text-xs font-mono text-emerald-600 font-medium">Public Impact Ready</span>
-              </div>
-
-              <h4 id="transformedHeadline" class="font-serif text-2xl sm:text-3xl text-brand-navy font-bold mb-4 leading-snug">
-                "The 4-Hour Miracle: Keeping Africa's Vaccines Cool"
-              </h4>
-
-              <div id="transformedArtifact" class="space-y-4">
-                <!-- Media Card Mockup -->
-                <div class="rounded-2xl border border-brand-lightBorder p-4 bg-brand-cream/60 flex items-start gap-4">
-                  <div class="w-14 h-14 rounded-xl bg-brand-navy text-white flex-shrink-0 flex items-center justify-center cursor-pointer hover:bg-brand-terracotta transition shadow">
-                    <i data-lucide="play-circle" class="w-8 h-8"></i>
-                  </div>
-                  <div>
-                    <div class="text-xs font-mono text-brand-terracotta font-bold uppercase">Mini-Documentary & Field Brief</div>
-                    <h5 class="text-sm font-bold text-brand-navy">Follow Nurse Amina's 42km motorcycle journey</h5>
-                    <p class="text-xs text-slate-600 mt-1">Shows exactly why solar refrigerators protect 18,000 children per district while explaining the statistical safety margin simply.</p>
-                  </div>
-                </div>
-
-                <!-- Digital Asset Mockup -->
-                <div class="grid grid-cols-2 gap-3 text-xs">
-                  <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                    <span class="font-bold text-brand-navy block mb-1">🏛️ For Governors</span>
-                    <p class="text-slate-600">1-Page Action Map: Highlighting the 3 road segments losing 70% of temperature control.</p>
-                  </div>
-                  <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                    <span class="font-bold text-brand-navy block mb-1">📱 For Mothers</span>
-                    <p class="text-slate-600">SMS & Radio spot explaining vaccine safety without alarming mothers.</p>
-                  </div>
-                </div>
-              </div>
+              <h3 class="font-serif text-2xl text-white group-hover:text-brand-amber transition-colors mb-2">
+                First Breath: The Doulas of Nyando
+              </h3>
+              <p class="text-xs text-slate-400 font-mono mb-3">Community Storytelling • Maternal Morbidity Reduction</p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                A cinema-verité documentation showing how community doulas integrated clinical hemorrhage algorithms into indigenous birthing traditions to drastically curb maternal loss.
+              </p>
             </div>
 
-            <!-- Value Footer -->
-            <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 space-y-1">
-              <span class="font-bold flex items-center gap-1.5 text-emerald-800">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> The Public Outcome:
+            <div class="pt-4 border-t border-slate-800 text-xs flex items-center justify-between text-slate-400">
+              <span class="font-mono text-brand-amber flex items-center gap-1">
+                <i data-lucide="award" class="w-3.5 h-3.5"></i> Global Health Film Laureate
               </span>
-              <p>Budget increased by 3 regional councils; cold-box adoption jumped 88% within 9 months; zero compromise to the study's underlying math.</p>
+              <button onclick="playFilmModal('first-breath')" class="text-white hover:text-brand-terracotta font-semibold flex items-center gap-1">
+                <span>Watch</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Film 3 -->
+        <div class="bg-brand-dark rounded-3xl overflow-hidden border border-slate-700/70 hover:border-brand-terracotta/50 transition-all hover:shadow-glow flex flex-col justify-between group">
+          <div class="relative aspect-video bg-gradient-to-tr from-slate-900 to-slate-800 overflow-hidden cursor-pointer" onclick="playFilmModal('silent-vectors')">
+            <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
+            
+            <div class="absolute top-4 left-4">
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono uppercase bg-emerald-600 text-white font-semibold">Animated & Micro-Doc</span>
+            </div>
+            <div class="absolute top-4 right-4 text-xs font-mono bg-black/60 px-2 py-0.5 rounded text-slate-300">
+              12 min
+            </div>
+
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-emerald-600/90 group-hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-all">
+                <i data-lucide="play" class="w-6 h-6 fill-current ml-0.5"></i>
+              </div>
             </div>
           </div>
 
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl text-white group-hover:text-brand-amber transition-colors mb-2">
+                Silent Vectors: The Water We Do Not See
+              </h3>
+              <p class="text-xs text-slate-400 font-mono mb-3">Data Visualization & Laboratory Microscopy</p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                Combining 3D microscopic pathogen simulations with investigative community interviews to illuminate chronic waterborne vector transmission in urban settlements.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 text-xs flex items-center justify-between text-slate-400">
+              <span class="font-mono text-cyan-400 flex items-center gap-1">
+                <i data-lucide="code" class="w-3.5 h-3.5"></i> Open Data Architecture
+              </span>
+              <button onclick="playFilmModal('silent-vectors')" class="text-white hover:text-brand-terracotta font-semibold flex items-center gap-1">
+                <span>Watch</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -953,6 +1166,8 @@
             <li><a href="#landscape" class="hover:text-white transition">The 3 Tectonic Forces</a></li>
             <li><a href="#ecosystem" class="hover:text-white transition">Interdisciplinary Bridge</a></li>
             <li><a href="#transformation" class="hover:text-white transition">Case Studies & Demos</a></li>
+            <li><a href="#articles" class="hover:text-white transition">Articles by Alphonce Oyugi</a></li>
+            <li><a href="#films" class="hover:text-white transition">Science Documentaries</a></li>
             <li><a href="#movement" class="hover:text-white transition">Capacity Building</a></li>
             <li><a href="#manifesto" class="hover:text-white transition">The 5-Minute Manifesto</a></li>
           </ul>
@@ -963,7 +1178,7 @@
           <ul class="space-y-2 text-sm">
             <li><a href="#join" class="hover:text-white transition">Researcher Fellows Program</a></li>
             <li><a href="#join" class="hover:text-white transition">Filmmaker & Story Residency</a></li>
-            <li><a href="#join" class="hover:text-white transition">Policy Brief Archive</a></li>
+            <li><a href="#articles" class="hover:text-white transition">Essay Archive (Oyugi)</a></li>
             <li><a href="#join" class="hover:text-white transition">Community Translation Kits</a></li>
           </ul>
         </div>
@@ -972,17 +1187,47 @@
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-4">
         <div>
-          &copy; Science Beyond the Paper Initiative. Advancing global health literacy and integrity.
+          &copy; Science Beyond the Paper Initiative. Founded & Curated by <span class="text-slate-300 font-semibold">Alphonce Oyugi</span>.
         </div>
         <div class="flex space-x-6">
           <a href="#" class="hover:text-slate-300">Open Science Manifesto</a>
           <a href="#" class="hover:text-slate-300">Ethics & Integrity</a>
-          <a href="#" class="hover:text-slate-300">Contact Team</a>
+          <a href="#join" class="hover:text-slate-300">Contact Alphonce Oyugi</a>
         </div>
       </div>
 
     </div>
   </footer>
+
+  <!-- Article Reader Modal -->
+  <div id="articleModal" class="fixed inset-0 z-50 hidden bg-brand-navy/85 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full p-8 md:p-10 shadow-2xl border border-brand-lightBorder relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeArticleModal()" class="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 text-slate-500 hover:text-brand-navy" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="articleModalContent" class="space-y-4">
+        <!-- Dynamically injected content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Film Cinema Player Modal -->
+  <div id="filmModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-brand-dark rounded-3xl max-w-4xl w-full overflow-hidden border border-slate-700 shadow-2xl relative">
+      <button onclick="closeFilmModal()" class="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      
+      <!-- Video Player Mockup -->
+      <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden" id="filmPlayerContainer">
+        <!-- Injected video preview screen -->
+      </div>
+
+      <div class="p-6 md:p-8 bg-brand-dark text-white space-y-3" id="filmModalDetails">
+        <!-- Injected film metadata -->
+      </div>
+    </div>
+  </div>
 
   <div id="manifestoModal" class="fixed inset-0 z-50 hidden bg-brand-navy/80 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl border border-brand-lightBorder relative max-h-[90vh] overflow-y-auto">
@@ -1038,9 +1283,11 @@
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('hidden');
-    });
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('hidden');
+      });
+    }
 
     function closeMenu() {
       mobileDrawer.classList.add('hidden');
@@ -1052,6 +1299,196 @@
     }
     function closeManifestoModal() {
       document.getElementById('manifestoModal').classList.add('hidden');
+    }
+
+    // Articles Filter & Modal System
+    const articleData = {
+      'peer-review': {
+        tag: 'Science Communication',
+        readTime: '7 min read',
+        author: 'Alphonce Oyugi',
+        title: 'The Peer-Review Ivory Tower: Why Breakthrough Data Dies in Silence',
+        lead: 'When researchers celebrate a publication in a closed high-impact journal while the clinics 20 miles away operate on five-year-old misinformation, the system has failed its moral contract.',
+        body: `
+          <p class="leading-relaxed text-slate-700">For decades, global health science has treated the publication of a peer-reviewed manuscript as the finish line of discovery. In realities where maternal mortality, vector outbreaks, and childhood malnutrition strike in real time, academic publication is not the finish line—it is merely the raw starting material.</p>
+          <p class="leading-relaxed text-slate-700">Trapped behind prohibitive paywalls and masked by disciplinary jargon, transformative discoveries fail to inform the nurse administering a vaccine, the governor allocating emergency procurement, or the mother determining whether clinic water is potable.</p>
+          <blockquote class="p-4 border-l-4 border-brand-terracotta bg-brand-cream italic font-serif text-lg text-brand-navy my-4">
+            "Producing verified evidence is a noble endeavor, but keeping it inside the laboratory silo is an ethical abdication."
+          </blockquote>
+          <p class="leading-relaxed text-slate-700">Through Science Beyond the Paper, we are advocating a fundamental shift: the mandatory co-creation of public translation assets alongside every funded trial. Only when data speaks plainly can communities act courageously.</p>
+        `
+      },
+      'line-item': {
+        tag: 'Health Economics',
+        readTime: '10 min read',
+        author: 'Alphonce Oyugi',
+        title: 'Beyond the Line Item: The True Arithmetic of Global Health Subsidies',
+        lead: 'A dissection of donor budgetary cycles. Reducing life-saving regional supply chains to sterile spreadsheet line items obscures the human cascade of preventable mortalities.',
+        body: `
+          <p class="leading-relaxed text-slate-700">During parliamentary debates and foreign assistance committee hearings, multi-million dollar health programs are often reduced to austere abstractions: line items to be trimmed, paused, or recalibrated against short-term fiscal anxieties.</p>
+          <p class="leading-relaxed text-slate-700">When an allocation is cut by 15%, the spreadsheet displays a tidy surplus. What it conceals is the specific district cold depot that shuts its auxiliary generator, allowing rabies and measles immunizations to degrade into saline.</p>
+          <p class="leading-relaxed text-slate-700">To defend global health investments, researchers must equip civil leaders with narrative economics: pairing robust cost-effectiveness data with the lived experiences of frontline health workers.</p>
+        `
+      },
+      'maternal-dignity': {
+        tag: 'Maternal Survival',
+        readTime: '6 min read',
+        author: 'Alphonce Oyugi',
+        title: 'Numbers with Heartbeats: Re-centering Dignity in Obstetric Care Metrics',
+        lead: 'Postpartum hemorrhage statistics often obscure the systemic barriers mothers face at community triage points.',
+        body: `
+          <p class="leading-relaxed text-slate-700">In epidemiological cohorts, maternal mortality is captured in ratios: 342 deaths per 100,000 live births. Such figures convey scale, but they obscure the agonizing three hours of transit, the absence of clean oxytocin storage, and the family members waiting in the rain.</p>
+          <p class="leading-relaxed text-slate-700">Our work in community health communication demonstrates that when local traditional doulas are trained to interpret vital warning indicators without feeling marginalized by clinical arrogance, triage referral delays collapse by over 60%.</p>
+        `
+      },
+      'ai-mirage': {
+        tag: 'Digital Literacy',
+        readTime: '8 min read',
+        author: 'Alphonce Oyugi',
+        title: 'The AI Synthesis Mirage: Guarding Epidemiological Truth Against Algorithmic Hallucination',
+        lead: 'As large language models summarize clinical studies into snappy bullet points, subtle statistical power caveats evaporate.',
+        body: `
+          <p class="leading-relaxed text-slate-700">Generative artificial intelligence has democratized reading velocity, but it possesses no clinical conscience. It easily conflates correlation with causation in non-randomized observational cohorts.</p>
+          <p class="leading-relaxed text-slate-700">If health scientists do not actively step into digital arenas with transparent, verified multimedia syntheses, automated engines will feed public feeds with hallucinatory pseudoscience.</p>
+        `
+      },
+      'legislation': {
+        tag: 'Civic Engagement',
+        readTime: '5 min read',
+        author: 'Alphonce Oyugi',
+        title: 'When the Public Comprehends, Legislation Shifts',
+        lead: 'Case histories showing how plain-language visual summaries turned dusty epidemiology monographs into enforceable clean water municipal mandates.',
+        body: `
+          <p class="leading-relaxed text-slate-700">Ministers and legislators do not have hours to read 80-page appendices. When scientific findings are synthesized into 1-page visual policy briefs, action follows.</p>
+          <p class="leading-relaxed text-slate-700">True civic power is unlocked when citizens themselves can quote the evidentiary basis for their clean water and clinical access demands.</p>
+        `
+      },
+      'public-citizen': {
+        tag: 'Curated Manifesto',
+        readTime: '9 min read',
+        author: 'Alphonce Oyugi',
+        title: 'The Researcher as Public Citizen: Unlearning Academic Detachment',
+        lead: 'Scientific objectivity does not require communicative paralysis. A guide for scientists stepping onto public stages.',
+        body: `
+          <p class="leading-relaxed text-slate-700">We were instructed in graduate school that emotional detachment equates to scientific integrity. In reality, passivity in the face of widespread misdirection is complicity.</p>
+          <p class="leading-relaxed text-slate-700">A researcher can remain 100% rigorous while speaking with moral urgency and narrative grace.</p>
+        `
+      }
+    };
+
+    function filterArticles(category) {
+      document.querySelectorAll('.article-filter-btn').forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.className = 'article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-navy text-white transition';
+        } else {
+          btn.className = 'article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition';
+        }
+      });
+
+      document.querySelectorAll('.article-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function openArticleModal(id) {
+      const art = articleData[id];
+      if (!art) return;
+      const modal = document.getElementById('articleModal');
+      const container = document.getElementById('articleModalContent');
+
+      container.innerHTML = `
+        <div class="flex items-center gap-2 mb-2">
+          <span class="px-2.5 py-1 rounded bg-brand-terracotta/10 text-brand-terracotta text-xs font-mono font-bold">${art.tag}</span>
+          <span class="text-xs font-mono text-slate-400">• ${art.readTime}</span>
+          <span class="text-xs font-mono text-brand-navy font-semibold">• By ${art.author}</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-navy leading-tight">${art.title}</h2>
+        <p class="font-serif italic text-lg text-slate-600 border-b border-brand-lightBorder pb-4">${art.lead}</p>
+        <div class="space-y-4 pt-2 font-sans text-base">${art.body}</div>
+        <div class="pt-6 border-t border-brand-lightBorder flex items-center justify-between">
+          <span class="text-xs font-mono text-slate-500">Curated & Written by Alphonce Oyugi</span>
+          <button onclick="closeArticleModal()" class="px-5 py-2 rounded-full bg-brand-navy text-white text-xs font-semibold hover:bg-brand-terracotta transition">Close Essay</button>
+        </div>
+      `;
+      modal.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeArticleModal() {
+      document.getElementById('articleModal').classList.add('hidden');
+    }
+
+    // Film Cinema Player System
+    const filmData = {
+      'cold-chain': {
+        title: 'The Cold Trail: Inside the Sub-Zero Race',
+        runtime: '18 minutes',
+        category: 'Field Documentary',
+        credits: 'Curated by Alphonce Oyugi • Directed with Visual Health Media',
+        description: 'Chronicles the journey of motorbike vaccine couriers across rural Kenyan pathways equipped with portable solar loggers. Features live interviews with biomedical engineers, regional nurses, and maternal community groups.',
+        previewImg: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80'
+      },
+      'first-breath': {
+        title: 'First Breath: The Doulas of Nyando',
+        runtime: '26 minutes',
+        category: 'Investigative Cinema',
+        credits: 'Produced in collaboration with Alphonce Oyugi & Frontline Guild',
+        description: 'Examines postpartum hemorrhage reduction in western Kenya through the integration of clinical early warning kits into traditional birthing protocols.',
+        previewImg: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80'
+      },
+      'silent-vectors': {
+        title: 'Silent Vectors: The Water We Do Not See',
+        runtime: '12 minutes',
+        category: 'Animated & Micro-Documentary',
+        credits: 'Data Visualization by Alphonce Oyugi & 3D BioArts Lab',
+        description: 'Combines cellular electron microscopy visualizations with public water quality geospatial sensor logs to show how runoff impacts municipal reservoirs.',
+        previewImg: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80'
+      }
+    };
+
+    function playFilmModal(id) {
+      const film = filmData[id];
+      if (!film) return;
+      const modal = document.getElementById('filmModal');
+      const player = document.getElementById('filmPlayerContainer');
+      const details = document.getElementById('filmModalDetails');
+
+      player.innerHTML = `
+        <div class="relative w-full h-full flex items-center justify-center bg-black">
+          <img src="${film.previewImg}" alt="${film.title}" class="absolute inset-0 w-full h-full object-cover opacity-40">
+          <div class="relative z-10 text-center p-6 space-y-4">
+            <div class="w-16 h-16 rounded-full bg-brand-terracotta text-white flex items-center justify-center mx-auto shadow-2xl animate-pulse">
+              <i data-lucide="play" class="w-8 h-8 fill-current ml-1"></i>
+            </div>
+            <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full inline-block text-xs font-mono text-brand-amber">
+              Simulation Stream • Science Beyond the Paper Media Showcase
+            </div>
+          </div>
+        </div>
+      `;
+
+      details.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+          <div>
+            <span class="text-xs font-mono text-brand-amber uppercase font-semibold">${film.category}</span>
+            <h3 class="font-serif text-2xl text-white font-bold">${film.title}</h3>
+          </div>
+          <span class="text-xs font-mono bg-slate-800 px-3 py-1 rounded text-slate-300">${film.runtime}</span>
+        </div>
+        <p class="text-xs text-brand-terracotta font-mono">${film.credits}</p>
+        <p class="text-sm text-slate-300 leading-relaxed">${film.description}</p>
+      `;
+
+      modal.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeFilmModal() {
+      document.getElementById('filmModal').classList.add('hidden');
     }
 
     // Case Study Switcher Data & Logic
