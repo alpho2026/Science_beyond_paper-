@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Science Beyond the Paper — Bridging Global Health Evidence and the Public</title>
+  <title>Science Beyond the Paper — By Alphonce Oyugi</title>
   
-  <!-- Google Fonts: Editorial Serif + Crisp Modern Sans -->
+  <!-- Google Fonts: Instrument Serif + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -33,18 +33,18 @@
               dark: '#080E1B',
               slate: '#1E293B',
               indigo: '#2A3C63',
-              terracotta: '#D95D39',
-              amber: '#F39C12',
-              cream: '#FDFBF7',
-              sand: '#F4EFE6',
-              lightBorder: '#E6DFD5',
+              terracotta: '#C85A32',
+              amber: '#E68A19',
+              cream: '#FAF7F2',
+              sand: '#F2ECE1',
+              lightBorder: '#E5DDCF',
               accent: '#0E7490'
             }
           },
           boxShadow: {
-            'subtle': '0 10px 30px -10px rgba(11, 19, 37, 0.08)',
-            'card': '0 15px 35px -5px rgba(11, 19, 37, 0.05), 0 5px 15px rgba(0,0,0,0.03)',
-            'glow': '0 0 40px rgba(217, 93, 57, 0.18)'
+            'subtle': '0 8px 25px -6px rgba(11, 19, 37, 0.06)',
+            'card': '0 16px 36px -8px rgba(11, 19, 37, 0.08), 0 4px 12px rgba(0,0,0,0.03)',
+            'glow': '0 0 40px rgba(200, 90, 50, 0.22)'
           }
         }
       }
@@ -53,165 +53,176 @@
 
   <style>
     body {
-      background-color: #FDFBF7;
+      background-color: #FAF7F2;
       color: #1E293B;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
 
-    .editorial-gradient {
-      background: radial-gradient(circle at 10% 20%, rgba(217, 93, 57, 0.08) 0%, rgba(253, 251, 247, 0) 50%),
-                  radial-gradient(circle at 90% 70%, rgba(14, 116, 144, 0.06) 0%, rgba(253, 251, 247, 0) 50%);
-    }
-
     .paper-texture {
-      background-image: radial-gradient(#d3cabe 0.75px, transparent 0.75px);
+      background-image: radial-gradient(#d8cebe 0.75px, transparent 0.75px);
       background-size: 20px 20px;
     }
 
-    .badge-pill {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    .hero-radial {
+      background: radial-gradient(circle at 15% 20%, rgba(200, 90, 50, 0.09) 0%, rgba(250, 247, 242, 0) 55%),
+                  radial-gradient(circle at 85% 75%, rgba(14, 116, 144, 0.08) 0%, rgba(250, 247, 242, 0) 50%);
     }
 
-    /* Custom audio waves animation */
-    @keyframes wave {
+    /* Sound wave animation */
+    @keyframes soundBar {
       0%, 100% { height: 6px; }
-      50% { height: 28px; }
+      50% { height: 26px; }
     }
     .wave-bar {
-      animation: wave 1.2s ease-in-out infinite;
+      animation: soundBar 1.2s ease-in-out infinite;
     }
     .wave-bar:nth-child(2) { animation-delay: 0.15s; }
     .wave-bar:nth-child(3) { animation-delay: 0.3s; }
     .wave-bar:nth-child(4) { animation-delay: 0.45s; }
     .wave-bar:nth-child(5) { animation-delay: 0.2s; }
+    .wave-bar:nth-child(6) { animation-delay: 0.35s; }
   </style>
 </head>
 
-<body class="selection:bg-brand-terracotta selection:text-white">
+<body class="selection:bg-brand-terracotta selection:text-white pt-20 sm:pt-24">
 
-  <nav class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-lightBorder transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Logo / Title -->
-      <a href="#" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white font-serif text-2xl font-bold tracking-tight shadow-md group-hover:bg-brand-terracotta transition-colors">
-          Ψ
-        </div>
-        <div>
-          <span class="font-serif text-xl sm:text-2xl font-bold text-brand-navy tracking-tight block leading-tight">Science Beyond the Paper</span>
-          <span class="text-[10px] tracking-widest uppercase font-mono text-brand-terracotta font-semibold">Global Health Translation</span>
-        </div>
-      </a>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-brand-lightBorder transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3.5 sm:py-4 gap-4">
+        
+        <!-- Brand & Author Signature (Properly sized with zero overflow) -->
+        <a href="#" class="flex items-center gap-3 shrink-0 group focus:outline-none">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-brand-navy flex items-center justify-center text-white font-serif text-2xl font-bold shadow group-hover:bg-brand-terracotta transition-colors shrink-0">
+            Ψ
+          </div>
+          <div class="flex flex-col justify-center">
+            <span class="font-serif text-lg sm:text-xl lg:text-2xl font-bold text-brand-navy tracking-tight leading-none group-hover:text-brand-terracotta transition-colors">
+              Science Beyond the Paper
+            </span>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-brand-terracotta font-semibold leading-none">
+                By Alphonce Oyugi
+              </span>
+              <span class="text-[10px] text-slate-400 font-mono hidden md:inline leading-none">• Global Health Translation</span>
+            </div>
+          </div>
+        </a>
 
-      <!-- Desktop Links -->
-      <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-brand-slate/80">
-        <a href="#landscape" class="hover:text-brand-terracotta transition-colors">The Urgency</a>
-        <a href="#ecosystem" class="hover:text-brand-terracotta transition-colors">Interdisciplinary Bridge</a>
-        <a href="#transformation" class="hover:text-brand-terracotta transition-colors">Before & After</a>
-        <a href="#articles" class="hover:text-brand-terracotta transition-colors">Articles & Essays</a>
-        <a href="#films" class="hover:text-brand-terracotta transition-colors">Documentaries</a>
-        <a href="#movement" class="hover:text-brand-terracotta transition-colors">Capacity Building</a>
-        <a href="#manifesto" class="hover:text-brand-terracotta transition-colors">5-Min Pitch</a>
+        <!-- Desktop Navigation Items (Compact font & balanced spacing for laptop screens) -->
+        <nav class="hidden xl:flex items-center gap-5 lg:gap-6 text-[13px] font-semibold text-slate-700">
+          <a href="#landscape" class="hover:text-brand-terracotta transition-colors py-1">The Urgency</a>
+          <a href="#ecosystem" class="hover:text-brand-terracotta transition-colors py-1">Interdisciplinary Bridge</a>
+          <a href="#transformation" class="hover:text-brand-terracotta transition-colors py-1">Paper to Public</a>
+          <a href="#articles" class="hover:text-brand-terracotta transition-colors py-1">Articles & Essays</a>
+          <a href="#films" class="hover:text-brand-terracotta transition-colors py-1">Documentaries</a>
+          <a href="#movement" class="hover:text-brand-terracotta transition-colors py-1">Capacity Building</a>
+          <a href="#manifesto" class="hover:text-brand-terracotta transition-colors py-1">5-Min Pitch</a>
+        </nav>
+
+        <!-- CTA & Mobile Trigger -->
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="#join" class="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-navy text-white hover:bg-brand-terracotta transition-all shadow hover:shadow-md">
+            <span>Join Initiative</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+
+          <!-- Mobile / Tablet Hamburger Button -->
+          <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-xl text-brand-navy hover:bg-brand-sand border border-brand-lightBorder transition" aria-label="Toggle Navigation">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
       </div>
+    </div>
 
-      <!-- Action Button -->
-      <div class="hidden sm:flex items-center space-x-4">
-        <a href="#join" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-brand-navy text-white hover:bg-brand-terracotta transition-all shadow-md hover:shadow-lg flex items-center gap-2">
-          <span>Join the Initiative</span>
-          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="hidden xl:hidden border-t border-brand-lightBorder bg-[#FAF7F2] px-6 py-5 space-y-3 shadow-lg">
+      <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Navigation</div>
+      <a href="#landscape" class="block text-sm font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">The Urgency</a>
+      <a href="#ecosystem" class="block text-sm font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Interdisciplinary Bridge</a>
+      <a href="#transformation" class="block text-sm font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Before & After: Paper to Public</a>
+      <a href="#articles" class="block text-sm font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Articles & Essays by Alphonce Oyugi</a>
+      <a href="#films" class="block text-sm font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Documentaries & Science Media</a>
+      <a href="#movement" class="block text-sm font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Leadership & Capacity Building</a>
+      <a href="#manifesto" class="block text-sm font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">5-Minute Manifesto</a>
+      <div class="pt-3 border-t border-brand-lightBorder">
+        <a href="#join" class="w-full text-center block px-4 py-2.5 rounded-full text-xs font-semibold bg-brand-navy text-white hover:bg-brand-terracotta" onclick="closeMenu()">
+          Join the Movement
         </a>
       </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-brand-navy hover:bg-brand-sand transition" aria-label="Toggle menu">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
     </div>
+  </header>
 
-    <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden lg:hidden border-b border-brand-lightBorder bg-brand-cream px-6 py-6 space-y-4">
-      <a href="#landscape" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">The Urgency</a>
-      <a href="#ecosystem" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Interdisciplinary Bridge</a>
-      <a href="#transformation" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Paper to Public</a>
-      <a href="#articles" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Articles & Essays</a>
-      <a href="#films" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Documentary Films</a>
-      <a href="#movement" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">Capacity Building</a>
-      <a href="#manifesto" class="block text-base font-medium text-brand-navy hover:text-brand-terracotta" onclick="closeMenu()">5-Min Manifesto</a>
-      <a href="#join" class="inline-block w-full text-center px-5 py-3 rounded-full text-sm font-semibold bg-brand-navy text-white hover:bg-brand-terracotta transition-all" onclick="closeMenu()">Join the Movement</a>
-    </div>
-  </nav>
-
-  <header class="relative pt-12 pb-24 md:pt-20 md:pb-32 editorial-gradient overflow-hidden border-b border-brand-lightBorder/60">
+  <section class="relative pt-6 pb-20 sm:pt-10 sm:pb-28 hero-radial border-b border-brand-lightBorder/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <!-- Top Tagline & Author Byline -->
-      <div class="flex flex-wrap items-center gap-3 mb-6">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium tracking-wide bg-brand-terracotta/10 text-brand-terracotta border border-brand-terracotta/20">
+      <!-- Top Badges -->
+      <div class="flex flex-wrap items-center gap-2.5 mb-6">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wide bg-brand-terracotta/10 text-brand-terracotta border border-brand-terracotta/25">
           <span class="w-2 h-2 rounded-full bg-brand-terracotta animate-pulse"></span>
-          A Call to Action in Global Health
+          Global Health Translation & Public Engagement
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-brand-navy text-brand-cream border border-brand-navy/30">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-brand-navy text-white shadow-sm">
           <i data-lucide="feather" class="w-3.5 h-3.5 text-brand-amber"></i>
           By Alphonce Oyugi
         </span>
-        <span class="text-xs font-medium text-slate-500 hidden sm:inline-block">Evidence • Rigor • Public Impact</span>
+        <span class="text-xs font-mono text-slate-500 hidden sm:inline-block">Rigorous Evidence • Human Storytelling</span>
       </div>
 
       <!-- Main Headline Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <div class="lg:col-span-8 space-y-6">
-          <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-brand-navy leading-[1.05]">
+          <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-brand-navy leading-[1.03]">
             Science <span class="italic font-light text-brand-terracotta">Beyond</span> the Paper.
           </h1>
 
-          <p class="text-xl sm:text-2xl text-slate-700 font-normal leading-relaxed max-w-2xl font-serif italic">
+          <p class="text-xl sm:text-2xl text-slate-700 font-serif italic max-w-2xl leading-relaxed">
             Building a stronger bridge between global health evidence and the public.
           </p>
 
-          <div class="p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-brand-lightBorder shadow-subtle max-w-2xl space-y-2">
-            <div class="text-xs font-mono uppercase text-brand-accent font-semibold tracking-wider flex items-center gap-2">
-              <i data-lucide="compass" class="w-4 h-4"></i> Core Thesis
+          <div class="p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-brand-lightBorder shadow-subtle max-w-2xl space-y-2">
+            <div class="text-[11px] font-mono uppercase text-brand-accent font-bold tracking-wider flex items-center gap-2">
+              <i data-lucide="compass" class="w-3.5 h-3.5"></i> Core Thesis
             </div>
             <p class="text-base sm:text-lg text-brand-navy font-medium leading-relaxed">
               "Producing good evidence is no longer enough. We must become vastly better at communicating <span class="underline decoration-brand-terracotta decoration-2 underline-offset-4">why that evidence matters</span>—and who it protects."
             </p>
           </div>
 
-          <!-- CTA Buttons -->
+          <!-- Quick Action Buttons -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#transformation" class="px-7 py-3.5 rounded-full text-base font-semibold bg-brand-navy text-white hover:bg-brand-terracotta transition-all shadow-md hover:shadow-xl flex items-center gap-3 group">
-              <span>Explore the Transformation</span>
-              <i data-lucide="sparkles" class="w-4 h-4 text-brand-amber group-hover:rotate-12 transition-transform"></i>
+            <a href="#transformation" class="px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold bg-brand-navy text-white hover:bg-brand-terracotta transition-all shadow-md hover:shadow-lg flex items-center gap-2.5 group">
+              <span>See Paper to Public Transformation</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"></i>
             </a>
 
-            <button onclick="openManifestoModal()" class="px-7 py-3.5 rounded-full text-base font-semibold bg-white text-brand-navy hover:bg-brand-sand border border-brand-lightBorder transition-all shadow-sm flex items-center gap-3">
-              <span class="w-7 h-7 rounded-full bg-brand-terracotta text-white flex items-center justify-center text-xs">
+            <button onclick="openManifestoModal()" class="px-6 py-3.5 rounded-full text-sm sm:text-base font-semibold bg-white text-brand-navy hover:bg-brand-sand border border-brand-lightBorder transition shadow-sm flex items-center gap-2.5">
+              <span class="w-6 h-6 rounded-full bg-brand-terracotta text-white flex items-center justify-center text-xs">
                 <i data-lucide="play" class="w-3.5 h-3.5 fill-current ml-0.5"></i>
               </span>
-              <span>5-Minute Manifesto</span>
+              <span>5-Min Keynote Manifesto</span>
             </button>
           </div>
         </div>
 
         <!-- Hero Side Graphic / Statement Card -->
         <div class="lg:col-span-4">
-          <div class="relative bg-brand-slate text-brand-cream p-8 rounded-3xl shadow-2xl border border-brand-indigo/40 overflow-hidden">
-            <!-- Background accent ring -->
-            <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-brand-terracotta/20 blur-3xl pointer-events-none"></div>
+          <div class="relative bg-brand-navy text-brand-cream p-7 sm:p-8 rounded-3xl shadow-xl border border-brand-indigo/50 overflow-hidden">
+            <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-brand-terracotta/25 blur-3xl pointer-events-none"></div>
 
-            <div class="space-x-2 text-xs font-mono text-brand-amber uppercase tracking-wider mb-4 flex items-center">
-              <i data-lucide="shield-alert" class="w-4 h-4 mr-1"></i> The Reality Check
+            <div class="text-xs font-mono text-brand-amber uppercase tracking-wider mb-4 flex items-center gap-1.5">
+              <i data-lucide="shield-alert" class="w-4 h-4"></i> The Reality Check
             </div>
 
             <p class="font-serif text-2xl leading-snug mb-6 text-white font-normal">
-              A breakthrough study without public translation is like a life-saving vaccine trapped in cold storage.
+              A breakthrough discovery without public translation is like a life-saving vaccine trapped in cold storage.
             </p>
 
             <div class="space-y-4 pt-4 border-t border-slate-700/60 text-xs text-slate-300">
               <div class="flex items-center justify-between">
-                <span>Academic Rigor</span>
+                <span>Methodological Rigor</span>
                 <span class="font-mono text-emerald-400 font-semibold">100% Intact</span>
               </div>
               <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
@@ -219,32 +230,34 @@
               </div>
 
               <div class="flex items-center justify-between pt-1">
-                <span>Public Reach & Trust</span>
-                <span class="font-mono text-brand-terracotta font-semibold">The Critical Gap</span>
+                <span>Public Reach & Public Trust</span>
+                <span class="font-mono text-brand-terracotta font-semibold">The Bridged Gap</span>
               </div>
               <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
                 <div class="bg-gradient-to-r from-brand-terracotta to-brand-amber h-full w-4/5"></div>
               </div>
             </div>
 
-            <div class="mt-8 pt-4 border-t border-slate-700/40 flex items-center gap-3 text-xs text-slate-400 font-mono">
-              <i data-lucide="layers" class="w-4 h-4 text-brand-amber"></i>
-              <span>Open Science + Creative Rigor</span>
+            <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-amber"></i> Open Translation
+              </span>
+              <span>By Alphonce Oyugi</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Quick Trust Indicators / Pills -->
-      <div class="mt-16 pt-8 border-t border-brand-lightBorder grid grid-cols-2 md:grid-cols-4 gap-4 text-center sm:text-left">
+      <!-- Trust Metrics Ribbon -->
+      <div class="mt-14 pt-8 border-t border-brand-lightBorder grid grid-cols-2 md:grid-cols-4 gap-4 text-center sm:text-left">
         <div class="p-3">
           <div class="font-mono text-2xl font-bold text-brand-navy">100%</div>
           <div class="text-xs text-slate-600 font-medium">Scientific Rigor Preserved</div>
         </div>
         <div class="p-3">
           <div class="font-mono text-2xl font-bold text-brand-terracotta">7+</div>
-          <div class="text-xs text-slate-600 font-medium">Creative & Tech Disciplines</div>
+          <div class="text-xs text-slate-600 font-medium">Interdisciplinary Pods</div>
         </div>
         <div class="p-3">
           <div class="font-mono text-2xl font-bold text-brand-accent">Human</div>
@@ -252,12 +265,12 @@
         </div>
         <div class="p-3">
           <div class="font-mono text-2xl font-bold text-slate-800">Action</div>
-          <div class="text-xs text-slate-600 font-medium">Direct Policy & Community Value</div>
+          <div class="text-xs text-slate-600 font-medium">Policy & Grassroots Mobilization</div>
         </div>
       </div>
 
     </div>
-  </header>
+  </section>
 
   <section id="landscape" class="py-24 bg-white border-b border-brand-lightBorder relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -267,8 +280,8 @@
         <h2 class="font-serif text-4xl sm:text-5xl text-brand-navy tracking-tight leading-tight">
           Why Producing Good Evidence Is No Longer Enough
         </h2>
-        <p class="mt-4 text-lg text-slate-600 leading-relaxed">
-          Global health has entered an unprecedented epoch. Three tectonic shifts have made standard academic publishing insufficient for safeguarding public health.
+        <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+          Global health has entered a rapidly shifting era where three concurrent challenges make standard academic publishing inadequate on its own.
         </p>
       </div>
 
@@ -283,7 +296,7 @@
           <span class="text-xs font-mono uppercase text-brand-terracotta font-semibold">Force 01</span>
           <h3 class="font-serif text-2xl text-brand-navy mt-1 mb-3">AI & The Deluge of Information</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Generative AI is transforming how scientific content is synthesized, indexed, and consumed. When automated algorithms summarize nuance into soundbites, critical health caveats are lost unless scientists proactively craft clear narratives.
+            Artificial intelligence is reshaping how scientific conclusions are generated, summarized, and consumed. When automated algorithms flatten statistical nuance into punchy soundbites, critical caveats disappear unless researchers lead the story.
           </p>
         </div>
 
@@ -293,9 +306,9 @@
             <i data-lucide="alert-triangle" class="w-6 h-6"></i>
           </div>
           <span class="text-xs font-mono uppercase text-brand-amber font-semibold">Force 02</span>
-          <h3 class="font-serif text-2xl text-brand-navy mt-1 mb-3">Viral Misinformation vs. Rigor</h3>
+          <h3 class="font-serif text-2xl text-brand-navy mt-1 mb-3">Misinformation Speed vs. Rigor</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Falsehoods spread at exponential speeds with slick production value and emotional resonance. Peer-reviewed research trapped behind $40 paywalls written in impenetrable jargon cannot compete on the public battlefield of ideas.
+            Health misinformation moves through digital networks at alarming speeds with emotive production value. Research locked inside 25-page PDF journals cannot compete against misinformation without compelling visual translation.
           </p>
         </div>
 
@@ -307,7 +320,7 @@
           <span class="text-xs font-mono uppercase text-brand-accent font-semibold">Force 03</span>
           <h3 class="font-serif text-2xl text-brand-navy mt-1 mb-3">Complex Funding & Policy Climate</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            International assistance budgets and national grants are under intense political scrutiny. Donors, lawmakers, and taxpayers demand to know not just that research was conducted, but what lives were transformed.
+            Global health programs operate in an increasingly volatile funding landscape. Decision-makers and citizens need to understand what health funding actually achieves in human terms, beyond raw budget lines.
           </p>
         </div>
 
@@ -323,11 +336,11 @@
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-brand-amber">
             <i data-lucide="lock" class="w-3.5 h-3.5"></i> The Academic Isolation Trap
           </div>
-          <h3 class="font-serif text-3xl sm:text-4xl text-brand-cream">
-            "A health intervention should not be represented only as a budget line or a sterile p-value."
+          <h3 class="font-serif text-3xl sm:text-4xl text-brand-cream leading-snug">
+            "A health intervention should not be represented only as a budget line or an impenetrable statistic."
           </h3>
-          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-            When researchers simply publish and walk away, the vacuum is filled by fear, rumor, or indifference. Science Beyond the Paper closes this vacuum with ethical, rigorous, human-centered storytelling.
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+            When researchers simply publish and walk away, the vacuum is filled by confusion, rumor, or indifference. Science Beyond the Paper bridges this void with human-centered, scientifically verified storytelling.
           </p>
         </div>
       </div>
@@ -344,11 +357,10 @@
           The Interdisciplinary Creative Bridge
         </h2>
         <p class="mt-4 text-base sm:text-lg text-slate-600">
-          Science communication cannot be an afterthought left to overloaded researchers. We assemble dedicated co-creation pods uniting scientific discovery with master storytellers.
+          Science communication cannot be an afterthought left to overloaded investigators. We assemble dedicated pods uniting researchers with masters of visual culture.
         </p>
       </div>
 
-      <!-- Interactive Ecosystem Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <!-- Cohort 1: Researchers -->
@@ -359,12 +371,12 @@
             </div>
             <div>
               <h4 class="font-bold text-brand-navy text-lg">Lead Researchers</h4>
-              <span class="text-xs text-slate-500 font-mono">Epidemiologists & Clinicians</span>
+              <span class="text-xs text-slate-500 font-mono">Epidemiologists & Trialists</span>
             </div>
           </div>
-          <p class="text-sm text-slate-600 mb-4">Provide the uncompromised evidentiary foundation, statistical validity, method transparency, and clinical nuance.</p>
-          <div class="text-xs font-mono bg-blue-50/70 text-blue-800 p-2.5 rounded-lg border border-blue-100 flex items-center gap-2">
-            <i data-lucide="check" class="w-3.5 h-3.5 text-blue-600"></i> Guards the Scientific Rigor
+          <p class="text-sm text-slate-600 mb-4">Provide evidentiary foundations, data validity, methodological nuance, and safeguards against oversimplification.</p>
+          <div class="text-xs font-mono bg-blue-50/80 text-blue-800 p-2.5 rounded-lg border border-blue-100 flex items-center gap-2">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-blue-600"></i> Protects Scientific Rigor
           </div>
         </div>
 
@@ -375,13 +387,13 @@
               <i data-lucide="video" class="w-6 h-6"></i>
             </div>
             <div>
-              <h4 class="font-bold text-brand-navy text-lg">Filmmakers & Documentarians</h4>
-              <span class="text-xs text-slate-500 font-mono">Visual Storytellers</span>
+              <h4 class="font-bold text-brand-navy text-lg">Filmmakers & Directors</h4>
+              <span class="text-xs text-slate-500 font-mono">Cinematic Storytellers</span>
             </div>
           </div>
-          <p class="text-sm text-slate-600 mb-4">Craft short-form documentaries and cinematic narratives putting human dignity and local reality front and center.</p>
+          <p class="text-sm text-slate-600 mb-4">Craft short-form documentaries and episodic field stories that place human dignity and frontline realia at center stage.</p>
           <div class="text-xs font-mono bg-orange-50 text-brand-terracotta p-2.5 rounded-lg border border-orange-100 flex items-center gap-2">
-            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-terracotta"></i> Delivers Visceral Empathy
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-terracotta"></i> Instills Visceral Empathy
           </div>
         </div>
 
@@ -393,16 +405,16 @@
             </div>
             <div>
               <h4 class="font-bold text-brand-navy text-lg">Data Artists & Designers</h4>
-              <span class="text-xs text-slate-500 font-mono">Visual Information Architects</span>
+              <span class="text-xs text-slate-500 font-mono">Information Architects</span>
             </div>
           </div>
-          <p class="text-sm text-slate-600 mb-4">Deconstruct dense regression tables and heatmaps into intuitive visual diagrams, scrollytelling, and explainers.</p>
+          <p class="text-sm text-slate-600 mb-4">Translate dense regression analyses, p-values, and tables into intuitive visual diagrams and scrollytelling experiences.</p>
           <div class="text-xs font-mono bg-emerald-50 text-emerald-800 p-2.5 rounded-lg border border-emerald-100 flex items-center gap-2">
             <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Makes Complexity Legible
           </div>
         </div>
 
-        <!-- Cohort 4: Journalists & Writers -->
+        <!-- Cohort 4: Journalists -->
         <div class="bg-white p-7 rounded-2xl border border-brand-lightBorder hover:border-brand-navy/30 transition shadow-sm hover:shadow-md">
           <div class="flex items-center gap-4 mb-4">
             <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center">
@@ -413,7 +425,7 @@
               <span class="text-xs text-slate-500 font-mono">Investigative Writers</span>
             </div>
           </div>
-          <p class="text-sm text-slate-600 mb-4">Translate academic abstracts into compelling editorial features, newsletters, and op-eds for major syndication.</p>
+          <p class="text-sm text-slate-600 mb-4">Convert academic findings into compelling editorial features, public essays, and syndicated op-eds.</p>
           <div class="text-xs font-mono bg-purple-50 text-purple-800 p-2.5 rounded-lg border border-purple-100 flex items-center gap-2">
             <i data-lucide="check" class="w-3.5 h-3.5 text-purple-600"></i> Drives Public Discourse
           </div>
@@ -430,9 +442,9 @@
               <span class="text-xs text-slate-500 font-mono">Digital Media Specialists</span>
             </div>
           </div>
-          <p class="text-sm text-slate-600 mb-4">Build lightweight mobile modules, WhatsApp learning toolkits, and bite-sized interactive micro-learning apps.</p>
+          <p class="text-sm text-slate-600 mb-4">Build lightweight mobile kits, WhatsApp micro-lessons, and localized interactive learning assets.</p>
           <div class="text-xs font-mono bg-cyan-50 text-cyan-800 p-2.5 rounded-lg border border-cyan-100 flex items-center gap-2">
-            <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-600"></i> Multiplies Grassroots Access
+            <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-600"></i> Grassroots Mobile Reach
           </div>
         </div>
 
@@ -444,12 +456,12 @@
             </div>
             <div>
               <h4 class="font-bold text-brand-navy text-lg">Communities & Policymakers</h4>
-              <span class="text-xs text-slate-500 font-mono">Civic & Grassroots Leaders</span>
+              <span class="text-xs text-slate-500 font-mono">Civic & Grassroots Partners</span>
             </div>
           </div>
-          <p class="text-sm text-slate-600 mb-4">Co-design messages to reflect local culture, test feasibility, and turn evidence into enforceable legislation.</p>
+          <p class="text-sm text-slate-600 mb-4">Co-design messaging to honor cultural realities, test local viability, and turn data into enforceable policy.</p>
           <div class="text-xs font-mono bg-amber-50 text-amber-900 p-2.5 rounded-lg border border-amber-100 flex items-center gap-2">
-            <i data-lucide="check" class="w-3.5 h-3.5 text-amber-700"></i> Anchors Authentic Action
+            <i data-lucide="check" class="w-3.5 h-3.5 text-amber-700"></i> Anchors Action & Impact
           </div>
         </div>
 
@@ -458,29 +470,122 @@
     </div>
   </section>
 
-  <section id="articles" class="py-24 bg-white border-b border-brand-lightBorder">
+  <section id="transformation" class="py-24 bg-white border-b border-brand-lightBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-terracotta block mb-2">Live Demonstration</span>
+        <h2 class="font-serif text-4xl sm:text-5xl text-brand-navy tracking-tight">
+          Paper to Public: Before & After
+        </h2>
+        <p class="mt-3 text-slate-600">
+          Compare how dense academic literature is transformed into clear, engaging multimedia without sacrificing a single grain of scientific rigor.
+        </p>
+
+        <!-- Case Switcher Tabs -->
+        <div class="flex flex-wrap gap-2 pt-6">
+          <button id="tabVaccine" onclick="switchCase('vaccine')" class="px-4 py-2 text-xs font-semibold rounded-lg bg-brand-navy text-white transition shadow-sm">
+            Case 01: Cold-Chain Logistics
+          </button>
+          <button id="tabMaternal" onclick="switchCase('maternal')" class="px-4 py-2 text-xs font-semibold rounded-lg bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition">
+            Case 02: Maternal Morbidity
+          </button>
+        </div>
+      </div>
+
+      <!-- Comparative Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- Left: Academic Paper View (Dense & Academic) -->
+        <div class="bg-brand-cream/60 rounded-3xl p-7 sm:p-8 border border-brand-lightBorder flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-brand-lightBorder/80 mb-5 text-xs font-mono text-slate-500">
+              <span class="flex items-center gap-1.5 font-bold text-slate-700">
+                <i data-lucide="file-text" class="w-4 h-4 text-slate-500"></i> Academic Manuscript
+              </span>
+              <span>Peer-Reviewed PDF</span>
+            </div>
+            
+            <span class="text-xs font-mono uppercase text-slate-400 font-semibold" id="caseTitle">Study: "Multivariate Regression Analysis of Last-Mile Cold Chain Temperature Deviations"</span>
+            
+            <h3 class="font-serif text-2xl text-slate-800 mt-2 mb-4 italic leading-snug" id="academicHeadline">
+              "Evaluating Ambient Heat Stress on Attenuation of Lyophilized Measles-Rubella Antigens in Semi-Arid Corridors"
+            </h3>
+            
+            <div class="bg-white p-5 rounded-xl border border-brand-lightBorder/80 text-xs sm:text-sm text-slate-600 font-mono space-y-3 leading-relaxed" id="academicSnippet">
+              <p><strong>Abstract Extract:</strong> Using Cox proportional hazards modeling (HR 1.84, 95% CI 1.32–2.56, p < 0.001), cold storage outages exceeding 3.5 hours corresponded to a 41.2% decrement in viable titer retention across tertiary depots (n=142).</p>
+              <p class="text-slate-400"><em>Peer-reviewed quantitative dataset.</em></p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-brand-lightBorder text-xs font-mono text-slate-500 flex items-center justify-between">
+            <span>Accessibility: High Barriers</span>
+            <span class="text-red-600 font-semibold">Low Public Comprehension</span>
+          </div>
+        </div>
+
+        <!-- Right: Public Transformed View (Engaging & Rigorous) -->
+        <div class="bg-brand-navy text-white rounded-3xl p-7 sm:p-8 border border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-brand-terracotta/20 blur-2xl pointer-events-none"></div>
+
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-5 text-xs font-mono text-brand-amber">
+              <span class="flex items-center gap-1.5 font-bold">
+                <i data-lucide="sparkles" class="w-4 h-4 text-brand-amber"></i> Transformed Delivery
+              </span>
+              <span>Documentary + Visual Story</span>
+            </div>
+
+            <span class="text-xs font-mono uppercase text-brand-terracotta font-semibold" id="transformedTag">Mini-Documentary & Field Brief</span>
+            
+            <h3 class="font-serif text-3xl text-brand-cream mt-2 mb-4 leading-snug" id="transformedHeadline">
+              "The 4-Hour Miracle: Keeping Africa's Vaccines Cool"
+            </h3>
+
+            <div class="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/10 space-y-3">
+              <div class="text-xs font-mono text-emerald-300 font-semibold flex items-center gap-1.5">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 100% Statistically Consistent With Manuscript
+              </div>
+              <p class="text-sm text-slate-200 leading-relaxed font-sans" id="transformedBody">
+                "Follow Nurse Amina's 42km motorcycle journey over unpaved desert tracks. This 8-minute documentary shows how portable solar refrigeration prevents vaccine degradation—protecting 18,000 children across 12 villages."
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-slate-300 flex items-center justify-between">
+            <span class="text-emerald-400">Accessibility: 100% Free & Open</span>
+            <span class="text-brand-amber font-semibold">Direct Policy Traction</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="articles" class="py-24 bg-brand-sand/40 border-b border-brand-lightBorder">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div class="max-w-2xl">
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-terracotta">Published & Perspective Writing</span>
+            <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-terracotta">Published Perspectives</span>
             <span class="text-xs font-mono text-slate-400">• By Alphonce Oyugi</span>
           </div>
           <h2 class="font-serif text-4xl sm:text-5xl text-brand-navy tracking-tight">
             Articles & Analytical Essays
           </h2>
           <p class="mt-3 text-slate-600">
-            Critical perspectives examining the translation of scientific data, equitable health financing, maternal well-being, and public accountability.
+            In-depth perspectives examining the ethics of translation, equitable health financing, maternal survival dignity, and public accountability.
           </p>
         </div>
 
         <!-- Filter Tags -->
         <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
           <button onclick="filterArticles('all')" class="article-filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-navy text-white transition" data-filter="all">All</button>
-          <button onclick="filterArticles('translation')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="translation">Translation</button>
-          <button onclick="filterArticles('policy')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="policy">Policy & Funding</button>
-          <button onclick="filterArticles('maternal')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="maternal">Maternal Health</button>
+          <button onclick="filterArticles('translation')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-white text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="translation">Translation</button>
+          <button onclick="filterArticles('policy')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-white text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="policy">Policy & Funding</button>
+          <button onclick="filterArticles('maternal')" class="article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-white text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition" data-filter="maternal">Maternal Health</button>
         </div>
       </div>
 
@@ -488,7 +593,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articlesGrid">
         
         <!-- Article 1 -->
-        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
+        <article class="article-card flex flex-col justify-between bg-white rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
           <div>
             <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
               <span class="px-2.5 py-1 rounded bg-brand-terracotta/10 text-brand-terracotta font-semibold">Science Communication</span>
@@ -498,7 +603,7 @@
               The Peer-Review Ivory Tower: Why Breakthrough Data Dies in Silence
             </h3>
             <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
-              When researchers celebrate a publication in a closed high-impact journal while the clinics 20 miles away operate on five-year-old misinformation, the system has failed its moral contract.
+              When researchers celebrate a publication in a closed high-impact journal while local clinics operate on outdated procedures, the social contract of science remains unfulfilled.
             </p>
           </div>
           <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
@@ -511,7 +616,7 @@
         </article>
 
         <!-- Article 2 -->
-        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="policy">
+        <article class="article-card flex flex-col justify-between bg-white rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="policy">
           <div>
             <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
               <span class="px-2.5 py-1 rounded bg-amber-500/10 text-brand-amber font-semibold">Health Economics</span>
@@ -534,7 +639,7 @@
         </article>
 
         <!-- Article 3 -->
-        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="maternal">
+        <article class="article-card flex flex-col justify-between bg-white rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="maternal">
           <div>
             <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
               <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-700 font-semibold">Maternal Survival</span>
@@ -557,14 +662,14 @@
         </article>
 
         <!-- Article 4 -->
-        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
+        <article class="article-card flex flex-col justify-between bg-white rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
           <div>
             <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
               <span class="px-2.5 py-1 rounded bg-brand-accent/10 text-brand-accent font-semibold">Digital Literacy</span>
               <span>8 min read</span>
             </div>
             <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
-              The AI Synthesis Mirage: Guarding Epidemiological Truth Against Algorithmic Hallucination
+              The AI Synthesis Mirage: Guarding Epidemiological Truth
             </h3>
             <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
               As large language models summarize clinical studies into snappy bullet points, subtle statistical power caveats evaporate. We require scientists who narrate the caveats themselves.
@@ -580,17 +685,17 @@
         </article>
 
         <!-- Article 5 -->
-        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="policy">
+        <article class="article-card flex flex-col justify-between bg-white rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="policy">
           <div>
             <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
-              <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-700 font-semibold">Civic Engagement</span>
+              <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-700 font-semibold">Civic Action</span>
               <span>5 min read</span>
             </div>
             <h3 class="font-serif text-2xl text-brand-navy group-hover:text-brand-terracotta transition-colors leading-snug mb-3">
               When the Public Comprehends, Legislation Shifts
             </h3>
             <p class="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-6">
-              Case histories showing how plain-language visual summaries turned dusty epidemiology monographs into enforceable clean water municipal mandates.
+              Case histories demonstrating how plain-language visual summaries converted dense environmental epidemiology monographs into enforceable clean water municipal mandates.
             </p>
           </div>
           <div class="pt-4 border-t border-brand-lightBorder/80 flex items-center justify-between">
@@ -603,7 +708,7 @@
         </article>
 
         <!-- Article 6 -->
-        <article class="article-card flex flex-col justify-between bg-brand-cream rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
+        <article class="article-card flex flex-col justify-between bg-white rounded-3xl p-7 border border-brand-lightBorder hover:border-brand-terracotta/40 hover:shadow-card transition group" data-category="translation">
           <div>
             <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
               <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-700 font-semibold">Curated Manifesto</span>
@@ -631,7 +736,6 @@
   </section>
 
   <section id="films" class="py-24 bg-brand-slate text-white border-b border-slate-800 relative overflow-hidden">
-    <!-- Subdued decorative glow -->
     <div class="absolute -right-32 top-1/4 w-96 h-96 rounded-full bg-brand-terracotta/10 blur-3xl pointer-events-none"></div>
     <div class="absolute -left-32 bottom-1/4 w-96 h-96 rounded-full bg-brand-accent/10 blur-3xl pointer-events-none"></div>
 
@@ -641,19 +745,19 @@
         <div class="max-w-2xl">
           <div class="flex items-center gap-2 mb-2">
             <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-amber">Curated Science Media</span>
-            <span class="text-xs font-mono text-slate-400">• Science & Documentary Showcases</span>
+            <span class="text-xs font-mono text-slate-400">• Directed & Co-Produced Showcases</span>
           </div>
           <h2 class="font-serif text-4xl sm:text-5xl text-brand-cream tracking-tight">
-            Documentaries & Visual Science
+            Documentary Films on Research
           </h2>
           <p class="mt-3 text-slate-300">
-            Translating complex epidemiological trials into cinematic narratives. Highlighting frontline clinicians, laboratory innovators, and resilient communities.
+            Cinematic narratives translating epidemiological fieldwork and biomedical innovations into human-centered film.
           </p>
         </div>
 
         <div class="mt-6 md:mt-0 flex items-center gap-2 text-xs font-mono text-slate-400">
           <i data-lucide="film" class="w-4 h-4 text-brand-amber"></i>
-          <span>Curated by Alphonce Oyugi & Creative Collaborators</span>
+          <span>Curated by Alphonce Oyugi</span>
         </div>
       </div>
 
@@ -662,7 +766,7 @@
         
         <!-- Film 1 -->
         <div class="bg-brand-dark rounded-3xl overflow-hidden border border-slate-700/70 hover:border-brand-terracotta/50 transition-all hover:shadow-glow flex flex-col justify-between group">
-          <div class="relative aspect-video bg-gradient-to-tr from-slate-900 to-slate-800 overflow-hidden cursor-pointer" onclick="playFilmModal('cold-chain')">
+          <div class="relative aspect-video bg-slate-900 overflow-hidden cursor-pointer" onclick="playFilmModal('cold-chain')">
             <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
             
@@ -686,15 +790,15 @@
               <h3 class="font-serif text-2xl text-white group-hover:text-brand-amber transition-colors mb-2">
                 The Cold Trail: Inside the Sub-Zero Race
               </h3>
-              <p class="text-xs text-slate-400 font-mono mb-3">Field Production • Kenya & Uganda Field Trials</p>
+              <p class="text-xs text-slate-400 font-mono mb-3">Field Production • Kenya & Uganda Logistics Trials</p>
               <p class="text-sm text-slate-300 leading-relaxed mb-6">
-                Follows mobile cold-chain couriers transporting fragile biologic titers across unpaved savannah roads, examining the engineering feats protecting infant immunizations.
+                Follows motorbike cold-chain couriers transporting fragile biologic titers across unpaved terrain, highlighting the human ingenuity preserving child immunizations.
               </p>
             </div>
 
             <div class="pt-4 border-t border-slate-800 text-xs flex items-center justify-between text-slate-400">
               <span class="font-mono text-emerald-400 flex items-center gap-1">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Based on 2024 Logistics Study
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Based on 2024 Field Trial
               </span>
               <button onclick="playFilmModal('cold-chain')" class="text-white hover:text-brand-terracotta font-semibold flex items-center gap-1">
                 <span>Watch</span>
@@ -706,7 +810,7 @@
 
         <!-- Film 2 -->
         <div class="bg-brand-dark rounded-3xl overflow-hidden border border-slate-700/70 hover:border-brand-terracotta/50 transition-all hover:shadow-glow flex flex-col justify-between group">
-          <div class="relative aspect-video bg-gradient-to-tr from-slate-900 to-slate-800 overflow-hidden cursor-pointer" onclick="playFilmModal('first-breath')">
+          <div class="relative aspect-video bg-slate-900 overflow-hidden cursor-pointer" onclick="playFilmModal('first-breath')">
             <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
             
@@ -729,9 +833,9 @@
               <h3 class="font-serif text-2xl text-white group-hover:text-brand-amber transition-colors mb-2">
                 First Breath: The Doulas of Nyando
               </h3>
-              <p class="text-xs text-slate-400 font-mono mb-3">Community Storytelling • Maternal Morbidity Reduction</p>
+              <p class="text-xs text-slate-400 font-mono mb-3">Community Healthcare • Maternal Survival</p>
               <p class="text-sm text-slate-300 leading-relaxed mb-6">
-                A cinema-verité documentation showing how community doulas integrated clinical hemorrhage algorithms into indigenous birthing traditions to drastically curb maternal loss.
+                A cinema-verité documentary capturing how community doulas integrated clinical blood-loss protocols into traditional birthing circles to curb maternal mortality.
               </p>
             </div>
 
@@ -749,12 +853,12 @@
 
         <!-- Film 3 -->
         <div class="bg-brand-dark rounded-3xl overflow-hidden border border-slate-700/70 hover:border-brand-terracotta/50 transition-all hover:shadow-glow flex flex-col justify-between group">
-          <div class="relative aspect-video bg-gradient-to-tr from-slate-900 to-slate-800 overflow-hidden cursor-pointer" onclick="playFilmModal('silent-vectors')">
+          <div class="relative aspect-video bg-slate-900 overflow-hidden cursor-pointer" onclick="playFilmModal('silent-vectors')">
             <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
             
             <div class="absolute top-4 left-4">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono uppercase bg-emerald-600 text-white font-semibold">Animated & Micro-Doc</span>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-mono uppercase bg-emerald-600 text-white font-semibold">Animated Micro-Doc</span>
             </div>
             <div class="absolute top-4 right-4 text-xs font-mono bg-black/60 px-2 py-0.5 rounded text-slate-300">
               12 min
@@ -772,9 +876,9 @@
               <h3 class="font-serif text-2xl text-white group-hover:text-brand-amber transition-colors mb-2">
                 Silent Vectors: The Water We Do Not See
               </h3>
-              <p class="text-xs text-slate-400 font-mono mb-3">Data Visualization & Laboratory Microscopy</p>
+              <p class="text-xs text-slate-400 font-mono mb-3">Microscopy & Spatial Modeling</p>
               <p class="text-sm text-slate-300 leading-relaxed mb-6">
-                Combining 3D microscopic pathogen simulations with investigative community interviews to illuminate chronic waterborne vector transmission in urban settlements.
+                Combines high-resolution pathogen microscopy with municipal runoff mapping to demystify waterborne vector transmissions in expanding peri-urban settings.
               </p>
             </div>
 
@@ -795,7 +899,7 @@
     </div>
   </section>
 
-  <section id="movement" class="py-24 bg-brand-sand/50 border-b border-brand-lightBorder">
+  <section id="movement" class="py-24 bg-brand-cream paper-texture border-b border-brand-lightBorder">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="max-w-3xl mb-16">
@@ -803,12 +907,11 @@
         <h2 class="font-serif text-4xl sm:text-5xl text-brand-navy tracking-tight">
           A Leadership & Capacity-Building Movement
         </h2>
-        <p class="mt-4 text-lg text-slate-700 leading-relaxed">
-          We don’t just package individual studies. We train the global health ecosystem to communicate courageously, listen to communities, and protect institutional trust.
+        <p class="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+          We don't merely package individual papers. We equip researchers to step into the public square, empower communities to question findings, and train decision-makers to act on evidence.
         </p>
       </div>
 
-      <!-- Stakeholder Interactive Accordion / Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Card 1 -->
@@ -819,7 +922,7 @@
             </div>
             <h3 class="font-serif text-2xl text-brand-navy mb-3">For Researchers</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Equipping scientists with science communication fellowships, media fluency, camera confidence, and storytelling toolkits. Never dumbing down the science, but mastering clarity.
+              Equipping investigators with public communication skills, interview confidence, and clear writing methods so their scholarship commands attention outside academic journals.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono text-brand-terracotta font-semibold">
@@ -835,11 +938,11 @@
             </div>
             <h3 class="font-serif text-2xl text-brand-navy mb-3">For Communities</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Transforming local populations from passive beneficiaries or statistical subjects into active, informed participants who question, understand, and demand evidence-based care.
+              Ensuring everyday people are never treated merely as study subjects, but as informed participants who possess the agency to question, verify, and benefit from health findings.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono text-brand-terracotta font-semibold">
-            ✦ From Study Subjects → Empowered Partners
+            ✦ From Passive Recipients → Active Partners
           </div>
         </div>
 
@@ -851,11 +954,11 @@
             </div>
             <h3 class="font-serif text-2xl text-brand-navy mb-3">For Policymakers</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Replacing 200-page dense PDFs with rapid executive syntheses, simulation dashboards, and cost-benefit visual models built for high-stakes legislative sessions.
+              Synthesizing 200-page monographs into rapid executive briefs, intuitive infographics, and policy-ready models designed for urgent legislative deliberations.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono text-brand-terracotta font-semibold">
-            ✦ From Shelved Reports → Actionable Legislation
+            ✦ From Shelved Documents → Direct Policy
           </div>
         </div>
 
@@ -865,13 +968,13 @@
             <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center mb-6">
               <i data-lucide="palette" class="w-6 h-6"></i>
             </div>
-            <h3 class="font-serif text-2xl text-brand-navy mb-3">For Creatives & Media</h3>
+            <h3 class="font-serif text-2xl text-brand-navy mb-3">For Creative Partners</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Enabling documentary filmmakers, UX artists, and journalists to work directly alongside principal investigators—ensuring ethical reporting with zero sensationalism.
+              Collaborating directly with principal scientists to ensure ethical, nuanced storytelling without sensationalism or exaggerated claims.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono text-brand-terracotta font-semibold">
-            ✦ From Hype & Clickbait → Rigorous Storytelling
+            ✦ From Clickbait Hype → Rigorous Storytelling
           </div>
         </div>
 
@@ -881,13 +984,13 @@
             <div class="w-12 h-12 rounded-2xl bg-indigo-900 text-white flex items-center justify-center mb-6">
               <i data-lucide="shield-check" class="w-6 h-6"></i>
             </div>
-            <h3 class="font-serif text-2xl text-brand-navy mb-3">For Donors & Universities</h3>
+            <h3 class="font-serif text-2xl text-brand-navy mb-3">For Funders & Agencies</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Demonstrating the tangible societal return on global health grants. Safeguarding long-term funding by showing the faces, villages, and healthcare workers impacted.
+              Demonstrating the tangible societal impact of grant investments. Defending program budgets by highlighting the lives protected and systems strengthened.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono text-brand-terracotta font-semibold">
-            ✦ From Defensive Budgets → Sustained Public Trust
+            ✦ From Financial Lines → Concrete Realities
           </div>
         </div>
 
@@ -899,11 +1002,11 @@
             </div>
             <h3 class="font-serif text-2xl text-brand-navy mb-3">Cross-Sector Alliances</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Fostering enduring coalitions between universities, global tech platforms, health ministries, and local non-profits to solve system-wide crises together.
+              Connecting universities, healthcare agencies, media producers, tech platforms, and grassroots networks into a cooperative infrastructure for evidence advocacy.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono text-brand-terracotta font-semibold">
-            ✦ From Fragmentation → Unified Movement
+            ✦ From Fragmentation → Collaborative Strength
           </div>
         </div>
 
@@ -915,7 +1018,7 @@
   <section class="py-24 bg-brand-navy text-white relative overflow-hidden">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="text-center space-y-6">
+      <div class="text-center space-y-5">
         <span class="text-xs font-mono uppercase tracking-widest text-brand-terracotta font-bold">The Advocacy Dimension</span>
         <h2 class="font-serif text-4xl sm:text-6xl text-brand-cream leading-tight">
           "More Than a Budget Line"
@@ -925,37 +1028,37 @@
 
       <div class="mt-12 space-y-8 text-lg sm:text-xl text-slate-200 font-serif leading-relaxed font-light">
         <p class="first-letter:text-5xl first-letter:font-serif first-letter:text-brand-terracotta first-letter:mr-3 first-letter:float-left">
-          When global health programs face volatile budget cycles, shifting political administrations, and competing domestic agendas, ordinary citizens and parliamentarians struggle to grasp what these investments genuinely achieve.
+          When global health programs encounter changing funding priorities and fiscal pressures, people need to understand what investments in global health actually accomplish.
         </p>
 
         <p>
-          A healthcare intervention should never be flattened into an arbitrary line in an annual appropriations bill or an obscure coefficient in an academic appendix.
+          A healthcare intervention should not be represented only as a budget item or an abstract statistic. We must illuminate the full reality: the evidence, the people behind the numbers, the outcomes achieved, the remaining limitations, and the human cost of alternative choices.
         </p>
 
         <div class="my-10 p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-          <h4 class="font-sans font-bold text-base text-brand-amber uppercase tracking-wider mb-4">What We Must Reveal to The World:</h4>
+          <h4 class="font-sans font-bold text-sm text-brand-amber uppercase tracking-wider mb-4">What We Reveal to The World:</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-sans text-slate-300">
             <div class="flex items-start gap-3">
               <i data-lucide="users" class="w-5 h-5 text-brand-terracotta flex-shrink-0 mt-0.5"></i>
-              <span>The actual frontline workers, families, and communities behind the numbers.</span>
+              <span>The dedicated frontline workers, families, and communities behind the numbers.</span>
             </div>
             <div class="flex items-start gap-3">
               <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-              <span>The hard-won human outcomes and lives preserved through science.</span>
+              <span>The concrete medical outcomes and lives preserved through scientific discoveries.</span>
             </div>
             <div class="flex items-start gap-3">
               <i data-lucide="alert-circle" class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
-              <span>The real-world limitations and uncertainties that still require honest inquiry.</span>
+              <span>The real constraints and unanswered questions that require continued honest inquiry.</span>
             </div>
             <div class="flex items-start gap-3">
               <i data-lucide="crosshair" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
-              <span>The catastrophic human consequences of underfunding or walking away.</span>
+              <span>The consequences of policy decisions and funding shifts on community health.</span>
             </div>
           </div>
         </div>
 
         <p class="text-center font-serif italic text-2xl text-brand-amber">
-          Better communication fosters an informed global democracy while keeping scientific integrity sacred.
+          Better communication fosters an informed public conversation about global health while maintaining unwavering scientific integrity.
         </p>
       </div>
 
@@ -966,46 +1069,44 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-terracotta block mb-2">The Core Philosophy</span>
+        <span class="text-xs font-mono uppercase font-semibold tracking-wider text-brand-terracotta block mb-2">The Five-Minute Message</span>
         <h2 class="font-serif text-4xl sm:text-5xl text-brand-navy tracking-tight">
-          The 5-Minute Manifesto
+          The Manifesto
         </h2>
         <p class="mt-3 text-slate-600">
-          Listen to or read the foundational address outlining the mission of Science Beyond the Paper.
+          Listen to the simulated audio address or read the core declaration framing the entire initiative.
         </p>
       </div>
 
       <!-- Styled Interactive Manifesto Player Box -->
-      <div class="bg-brand-cream rounded-3xl border border-brand-lightBorder p-8 sm:p-12 shadow-card relative overflow-hidden">
+      <div class="bg-brand-cream rounded-3xl border border-brand-lightBorder p-7 sm:p-12 shadow-card relative overflow-hidden">
         
         <!-- Audio Simulation Bar -->
         <div class="flex flex-col sm:flex-row items-center justify-between pb-8 border-b border-brand-lightBorder gap-6">
           <div class="flex items-center gap-4">
-            <button id="manifestoPlayBtn" onclick="toggleManifestoAudio()" class="w-14 h-14 rounded-full bg-brand-navy text-white flex items-center justify-center hover:bg-brand-terracotta transition shadow-md group">
+            <button id="manifestoPlayBtn" onclick="toggleManifestoAudio()" class="w-14 h-14 rounded-full bg-brand-navy text-white flex items-center justify-center hover:bg-brand-terracotta transition shadow-md group shrink-0">
               <i id="playIcon" data-lucide="play" class="w-6 h-6 fill-current ml-0.5 group-hover:scale-110 transition-transform"></i>
             </button>
             <div>
-              <div class="text-xs font-mono text-brand-terracotta font-semibold uppercase">Keynote Address</div>
-              <h4 class="font-serif text-xl text-brand-navy font-bold">Science Beyond the Paper: The Five-Minute Call</h4>
+              <div class="text-xs font-mono text-brand-terracotta font-semibold uppercase">Address By Alphonce Oyugi</div>
+              <h4 class="font-serif text-xl sm:text-2xl text-brand-navy font-bold">Science Beyond the Paper: The Five-Minute Message</h4>
               <span id="playerTimer" class="text-xs text-slate-500 font-mono">00:00 / 05:00</span>
             </div>
           </div>
 
           <!-- Animated Sound Wave Simulator -->
-          <div id="soundWaves" class="flex items-center gap-1.5 h-10 px-4 py-2 bg-white rounded-2xl border border-brand-lightBorder">
+          <div id="soundWaves" class="flex items-center gap-1.5 h-10 px-4 py-2 bg-white rounded-2xl border border-brand-lightBorder shrink-0">
             <span class="wave-bar w-1 bg-slate-300 rounded-full h-2"></span>
             <span class="wave-bar w-1 bg-slate-300 rounded-full h-3"></span>
             <span class="wave-bar w-1 bg-slate-300 rounded-full h-5"></span>
             <span class="wave-bar w-1 bg-slate-300 rounded-full h-2"></span>
             <span class="wave-bar w-1 bg-slate-300 rounded-full h-4"></span>
             <span class="wave-bar w-1 bg-slate-300 rounded-full h-6"></span>
-            <span class="wave-bar w-1 bg-slate-300 rounded-full h-3"></span>
-            <span class="wave-bar w-1 bg-slate-300 rounded-full h-2"></span>
             <span class="text-xs font-mono text-slate-500 ml-2 font-semibold" id="audioStateText">Click to listen</span>
           </div>
         </div>
 
-        <!-- Manifesto Text Quote -->
+        <!-- Manifesto Highlight -->
         <div class="pt-8 space-y-6">
           <blockquote class="font-serif text-2xl sm:text-3xl text-brand-navy leading-relaxed italic text-center sm:text-left">
             “We should not leave science inside the paper. We should build the skills, partnerships, and platforms needed to take it into communities, conversations, and sustainable actions.”
@@ -1013,16 +1114,16 @@
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-sm text-slate-700 border-t border-brand-lightBorder/80">
             <div class="space-y-1">
-              <span class="font-bold text-brand-navy block">1. Teach Researchers to Speak</span>
-              <p class="text-xs text-slate-600 leading-normal">Training our brightest minds to present with human vulnerability and narrative strength.</p>
+              <span class="font-bold text-brand-navy block">1. Train Researchers to Speak</span>
+              <p class="text-xs text-slate-600 leading-normal">Giving scientists the skills and confidence to communicate beyond academic journals.</p>
             </div>
             <div class="space-y-1">
               <span class="font-bold text-brand-navy block">2. Involve Communities as Peers</span>
-              <p class="text-xs text-slate-600 leading-normal">Never treating families as recipients, but as decision-makers entitled to understand.</p>
+              <p class="text-xs text-slate-600 leading-normal">Ensuring citizens are active participants in decisions shaping their healthcare.</p>
             </div>
             <div class="space-y-1">
-              <span class="font-bold text-brand-navy block">3. Bridge the Trust Chasm</span>
-              <p class="text-xs text-slate-600 leading-normal">Defending truth through beauty, transparency, and accessible scientific documentation.</p>
+              <span class="font-bold text-brand-navy block">3. Defend Public Trust</span>
+              <p class="text-xs text-slate-600 leading-normal">Connecting evidence with people before misinformation takes root.</p>
             </div>
           </div>
         </div>
@@ -1041,7 +1142,7 @@
           Join the Movement
         </h2>
         <p class="mt-3 text-slate-600">
-          Whether you are a scientist, filmmaker, designer, funder, or community advocate—there is a place for your craft at this table.
+          Whether you are a scientist, filmmaker, designer, funder, or community champion—there is a collaborative role for your craft.
         </p>
       </div>
 
@@ -1053,25 +1154,25 @@
           <!-- Role Selector Chips -->
           <div>
             <label class="block text-xs font-mono uppercase tracking-wider text-slate-600 font-semibold mb-3">
-              Select Your Role / Discipline
+              Select Your Discipline
             </label>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="roleSelector">
-              <button type="button" onclick="selectRole(this, 'researcher')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition active-role bg-brand-navy text-white">
+              <button type="button" onclick="selectRole(this, 'researcher')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-white text-left transition active-role bg-brand-navy">
                 🔬 Researcher / PI
               </button>
-              <button type="button" onclick="selectRole(this, 'creative')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition">
+              <button type="button" onclick="selectRole(this, 'creative')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition bg-white">
                 🎬 Filmmaker / Designer
               </button>
-              <button type="button" onclick="selectRole(this, 'journalist')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition">
+              <button type="button" onclick="selectRole(this, 'journalist')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition bg-white">
                 ✍️ Journalist / Writer
               </button>
-              <button type="button" onclick="selectRole(this, 'policymaker')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition">
+              <button type="button" onclick="selectRole(this, 'policymaker')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition bg-white">
                 🏛️ Policymaker / Ministry
               </button>
-              <button type="button" onclick="selectRole(this, 'funder')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition">
+              <button type="button" onclick="selectRole(this, 'funder')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition bg-white">
                 💼 Funder / Organization
               </button>
-              <button type="button" onclick="selectRole(this, 'community')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition">
+              <button type="button" onclick="selectRole(this, 'community')" class="role-btn px-4 py-3 rounded-xl border border-brand-lightBorder text-xs font-medium text-slate-700 text-left hover:border-brand-navy hover:bg-slate-50 transition bg-white">
                 🌱 Community Champion
               </button>
             </div>
@@ -1085,54 +1186,54 @@
               <input type="text" id="fullName" required placeholder="Dr. Elena Rostova" class="w-full px-4 py-3 rounded-xl border border-brand-lightBorder focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none text-sm bg-brand-cream/30">
             </div>
             <div>
-              <label for="emailAddr" class="block text-xs font-mono uppercase text-slate-600 font-semibold mb-2">Work or Academic Email</label>
+              <label for="emailAddr" class="block text-xs font-mono uppercase text-slate-600 font-semibold mb-2">Email Address</label>
               <input type="email" id="emailAddr" required placeholder="elena@globalhealth.org" class="w-full px-4 py-3 rounded-xl border border-brand-lightBorder focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none text-sm bg-brand-cream/30">
             </div>
           </div>
 
-          <!-- Institution / Organization -->
+          <!-- Institution / Affiliation -->
           <div>
-            <label for="institution" class="block text-xs font-mono uppercase text-slate-600 font-semibold mb-2">Institution, Media Outlet, or Community Affiliation</label>
+            <label for="institution" class="block text-xs font-mono uppercase text-slate-600 font-semibold mb-2">Organization, Institute, or Community Affiliation</label>
             <input type="text" id="institution" placeholder="University, Health Agency, Studio, or NGO" class="w-full px-4 py-3 rounded-xl border border-brand-lightBorder focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none text-sm bg-brand-cream/30">
           </div>
 
-          <!-- Project / Pitch Note -->
+          <!-- Message -->
           <div>
             <label for="visionNote" class="block text-xs font-mono uppercase text-slate-600 font-semibold mb-2">
-              How would you like to collaborate with Science Beyond the Paper?
+              Collaboration Interest or Message
             </label>
-            <textarea id="visionNote" rows="3" placeholder="Tell us about a paper you want translated, a story you wish to produce, or how your organization can partner with this movement..." class="w-full px-4 py-3 rounded-xl border border-brand-lightBorder focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none text-sm bg-brand-cream/30"></textarea>
+            <textarea id="visionNote" rows="3" placeholder="Tell us about a research project you want translated, media resources you wish to co-produce, or partnerships you want to build..." class="w-full px-4 py-3 rounded-xl border border-brand-lightBorder focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none text-sm bg-brand-cream/30"></textarea>
           </div>
 
-          <!-- Dynamic Role Tip Box -->
+          <!-- Role Tip -->
           <div id="roleTipBox" class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-center gap-3">
-            <i data-lucide="sparkles" class="w-5 h-5 text-brand-terracotta flex-shrink-0"></i>
-            <span id="roleTipText">As a Researcher, you will receive our "Translation Primer" and invitations to pair with documentarians and design studios.</span>
+            <i data-lucide="sparkles" class="w-5 h-5 text-brand-terracotta shrink-0"></i>
+            <span id="roleTipText">As a Researcher, you will receive our translation primer and invitations to pair with documentarians and design teams.</span>
           </div>
 
-          <!-- Submit Button -->
+          <!-- Actions -->
           <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-navy text-white hover:bg-brand-terracotta font-semibold text-sm transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-navy text-white hover:bg-brand-terracotta font-semibold text-sm transition-all shadow hover:shadow-md flex items-center justify-center gap-2">
               <span>Submit Collaboration Pledge</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
 
-            <!-- Download Toolkit Direct Button -->
+            <!-- Download Button -->
             <button type="button" onclick="downloadToolkit()" class="text-xs font-mono text-slate-600 hover:text-brand-terracotta flex items-center gap-1.5 transition">
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
-              <span>Download 1-Page Initiative Blueprint (PDF)</span>
+              <span>Download Initiative Blueprint (.txt)</span>
             </button>
           </div>
 
         </form>
 
-        <!-- Success Notification Box (Initially Hidden) -->
+        <!-- Success Box -->
         <div id="formSuccessMessage" class="hidden mt-6 p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-center space-y-2">
           <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto mb-2">
             <i data-lucide="check" class="w-6 h-6"></i>
           </div>
-          <h4 class="font-bold text-lg text-emerald-950 font-serif">Welcome to Science Beyond the Paper!</h4>
-          <p class="text-sm max-w-md mx-auto text-emerald-800">Your pledge has been registered. Our interdisciplinary team will connect with you to review translational partnerships and toolkits.</p>
+          <h4 class="font-bold text-lg text-emerald-950 font-serif">Welcome to Science Beyond the Paper</h4>
+          <p class="text-sm max-w-md mx-auto text-emerald-800">Your collaboration pledge has been received. Our team and Alphonce Oyugi will be in touch with next steps.</p>
         </div>
 
       </div>
@@ -1150,36 +1251,35 @@
             <div class="w-8 h-8 rounded-lg bg-brand-terracotta text-white flex items-center justify-center font-serif text-lg font-bold">
               Ψ
             </div>
-            <span class="font-serif text-2xl font-bold text-white tracking-tight">Science Beyond the Paper</span>
+            <div>
+              <span class="font-serif text-2xl font-bold text-white tracking-tight block">Science Beyond the Paper</span>
+              <span class="text-xs font-mono text-brand-amber">Founded & Curated by Alphonce Oyugi</span>
+            </div>
           </div>
           <p class="text-sm text-slate-400 max-w-md leading-relaxed">
-            An interdisciplinary initiative dedicated to building fearless, rigorous, and inspiring bridges between global health scientific evidence and the public.
+            An interdisciplinary science communication and public engagement movement bringing researchers together with filmmakers, journalists, designers, policymakers, and communities.
           </p>
-          <div class="text-xs font-mono text-brand-amber">
-            Rigorous Science • Creative Storytelling • Community Action
-          </div>
         </div>
 
         <div>
-          <h5 class="text-white text-xs font-mono uppercase tracking-wider mb-4">Core Dimensions</h5>
+          <h5 class="text-white text-xs font-mono uppercase tracking-wider mb-4">Core Sections</h5>
           <ul class="space-y-2 text-sm">
-            <li><a href="#landscape" class="hover:text-white transition">The 3 Tectonic Forces</a></li>
-            <li><a href="#ecosystem" class="hover:text-white transition">Interdisciplinary Bridge</a></li>
-            <li><a href="#transformation" class="hover:text-white transition">Case Studies & Demos</a></li>
+            <li><a href="#landscape" class="hover:text-white transition">The 3 Forces</a></li>
+            <li><a href="#ecosystem" class="hover:text-white transition">Creative Bridge</a></li>
+            <li><a href="#transformation" class="hover:text-white transition">Paper to Public</a></li>
             <li><a href="#articles" class="hover:text-white transition">Articles by Alphonce Oyugi</a></li>
             <li><a href="#films" class="hover:text-white transition">Science Documentaries</a></li>
             <li><a href="#movement" class="hover:text-white transition">Capacity Building</a></li>
-            <li><a href="#manifesto" class="hover:text-white transition">The 5-Minute Manifesto</a></li>
           </ul>
         </div>
 
         <div>
-          <h5 class="text-white text-xs font-mono uppercase tracking-wider mb-4">Resources & Connect</h5>
+          <h5 class="text-white text-xs font-mono uppercase tracking-wider mb-4">Engagement</h5>
           <ul class="space-y-2 text-sm">
             <li><a href="#join" class="hover:text-white transition">Researcher Fellows Program</a></li>
-            <li><a href="#join" class="hover:text-white transition">Filmmaker & Story Residency</a></li>
-            <li><a href="#articles" class="hover:text-white transition">Essay Archive (Oyugi)</a></li>
-            <li><a href="#join" class="hover:text-white transition">Community Translation Kits</a></li>
+            <li><a href="#join" class="hover:text-white transition">Story Residencies</a></li>
+            <li><a href="#manifesto" class="hover:text-white transition">5-Min Manifesto</a></li>
+            <li><a href="#join" class="hover:text-white transition">Collaboration Pledge</a></li>
           </ul>
         </div>
 
@@ -1187,26 +1287,27 @@
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-4">
         <div>
-          &copy; Science Beyond the Paper Initiative. Founded & Curated by <span class="text-slate-300 font-semibold">Alphonce Oyugi</span>.
+          &copy; Science Beyond the Paper Initiative. Created by <span class="text-slate-300 font-semibold">Alphonce Oyugi</span>.
         </div>
         <div class="flex space-x-6">
-          <a href="#" class="hover:text-slate-300">Open Science Manifesto</a>
-          <a href="#" class="hover:text-slate-300">Ethics & Integrity</a>
-          <a href="#join" class="hover:text-slate-300">Contact Alphonce Oyugi</a>
+          <a href="#" class="hover:text-slate-300">Open Science Principles</a>
+          <a href="#" class="hover:text-slate-300">Scientific Integrity</a>
+          <a href="#join" class="hover:text-slate-300">Connect</a>
         </div>
       </div>
 
     </div>
   </footer>
 
+  
   <!-- Article Reader Modal -->
-  <div id="articleModal" class="fixed inset-0 z-50 hidden bg-brand-navy/85 backdrop-blur-sm flex items-center justify-center p-4">
+  <div id="articleModal" class="fixed inset-0 z-50 hidden bg-brand-navy/80 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-3xl w-full p-8 md:p-10 shadow-2xl border border-brand-lightBorder relative max-h-[90vh] overflow-y-auto">
       <button onclick="closeArticleModal()" class="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 text-slate-500 hover:text-brand-navy" aria-label="Close modal">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
       <div id="articleModalContent" class="space-y-4">
-        <!-- Dynamically injected content -->
+        <!-- Injected via JavaScript -->
       </div>
     </div>
   </div>
@@ -1218,31 +1319,30 @@
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
       
-      <!-- Video Player Mockup -->
       <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden" id="filmPlayerContainer">
-        <!-- Injected video preview screen -->
+        <!-- Injected via JavaScript -->
       </div>
 
       <div class="p-6 md:p-8 bg-brand-dark text-white space-y-3" id="filmModalDetails">
-        <!-- Injected film metadata -->
+        <!-- Injected via JavaScript -->
       </div>
     </div>
   </div>
 
+  <!-- 5-Minute Manifesto Modal -->
   <div id="manifestoModal" class="fixed inset-0 z-50 hidden bg-brand-navy/80 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl border border-brand-lightBorder relative max-h-[90vh] overflow-y-auto">
-      
       <button onclick="closeManifestoModal()" class="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 text-slate-500 hover:text-brand-navy" aria-label="Close modal">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="space-y-4">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-terracotta/10 text-brand-terracotta text-xs font-mono font-bold">
-          <i data-lucide="mic" class="w-3.5 h-3.5"></i> 5-MINUTE CORE PITCH
+          <i data-lucide="mic" class="w-3.5 h-3.5"></i> KEYNOTE DECLARATION • ALPHONCE OYUGI
         </div>
 
         <h3 class="font-serif text-3xl text-brand-navy">
-          Science Beyond the Paper: The Manifesto
+          Science Beyond the Paper: The Five-Minute Message
         </h3>
 
         <div class="space-y-4 text-slate-700 text-base leading-relaxed font-serif pt-2 border-t border-slate-200">
@@ -1256,10 +1356,10 @@
             My idea is to build <strong>Science Beyond the Paper</strong> as an interdisciplinary science communication and public engagement initiative that brings researchers together with filmmakers, journalists, designers, educators, technology professionals, policymakers, and communities.
           </p>
           <p>
-            Together, we transform important global health research into documentaries, visual stories, digital content, and educational resources that make evidence accessible without compromising scientific rigor.
+            Together, we will transform important global health research into documentaries, visual stories, digital content, and educational resources that make evidence accessible without compromising scientific rigor.
           </p>
           <p>
-            This is more than a communication project. It is a leadership and capacity-building movement. When global health programs face changing priorities and funding pressures, people need to understand what investments actually accomplish.
+            This is more than a communication project. It is a leadership and capacity-building movement. When global health programs face changing priorities and funding pressures, people need to understand what investments in global health actually accomplish. A health intervention should not be represented only as a budget line or a statistic.
           </p>
           <div class="p-4 rounded-xl bg-brand-cream border border-brand-lightBorder font-sans text-sm text-brand-navy font-medium italic">
             "We should not leave science inside the paper. We should build the skills, partnerships, and platforms needed to take it into communities, conversations, and sustainable actions."
@@ -1272,15 +1372,14 @@
           </button>
         </div>
       </div>
-
     </div>
   </div>
 
   <script>
-    // Initialize Lucide Icons
+    // Initialize Lucide icons
     lucide.createIcons();
 
-    // Mobile Menu Toggle
+    // Mobile Drawer Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
     if (mobileMenuBtn) {
@@ -1293,7 +1392,7 @@
       mobileDrawer.classList.add('hidden');
     }
 
-    // Modal Handlers
+    // Manifesto Modal
     function openManifestoModal() {
       document.getElementById('manifestoModal').classList.remove('hidden');
     }
@@ -1301,14 +1400,14 @@
       document.getElementById('manifestoModal').classList.add('hidden');
     }
 
-    // Articles Filter & Modal System
+    // Articles Data & Interactivity
     const articleData = {
       'peer-review': {
         tag: 'Science Communication',
         readTime: '7 min read',
         author: 'Alphonce Oyugi',
         title: 'The Peer-Review Ivory Tower: Why Breakthrough Data Dies in Silence',
-        lead: 'When researchers celebrate a publication in a closed high-impact journal while the clinics 20 miles away operate on five-year-old misinformation, the system has failed its moral contract.',
+        lead: 'When researchers celebrate a publication in a closed high-impact journal while local clinics operate on outdated procedures, the system has failed its moral contract.',
         body: `
           <p class="leading-relaxed text-slate-700">For decades, global health science has treated the publication of a peer-reviewed manuscript as the finish line of discovery. In realities where maternal mortality, vector outbreaks, and childhood malnutrition strike in real time, academic publication is not the finish line—it is merely the raw starting material.</p>
           <p class="leading-relaxed text-slate-700">Trapped behind prohibitive paywalls and masked by disciplinary jargon, transformative discoveries fail to inform the nurse administering a vaccine, the governor allocating emergency procurement, or the mother determining whether clinic water is potable.</p>
@@ -1360,283 +1459,4 @@
         lead: 'Case histories showing how plain-language visual summaries turned dusty epidemiology monographs into enforceable clean water municipal mandates.',
         body: `
           <p class="leading-relaxed text-slate-700">Ministers and legislators do not have hours to read 80-page appendices. When scientific findings are synthesized into 1-page visual policy briefs, action follows.</p>
-          <p class="leading-relaxed text-slate-700">True civic power is unlocked when citizens themselves can quote the evidentiary basis for their clean water and clinical access demands.</p>
-        `
-      },
-      'public-citizen': {
-        tag: 'Curated Manifesto',
-        readTime: '9 min read',
-        author: 'Alphonce Oyugi',
-        title: 'The Researcher as Public Citizen: Unlearning Academic Detachment',
-        lead: 'Scientific objectivity does not require communicative paralysis. A guide for scientists stepping onto public stages.',
-        body: `
-          <p class="leading-relaxed text-slate-700">We were instructed in graduate school that emotional detachment equates to scientific integrity. In reality, passivity in the face of widespread misdirection is complicity.</p>
-          <p class="leading-relaxed text-slate-700">A researcher can remain 100% rigorous while speaking with moral urgency and narrative grace.</p>
-        `
-      }
-    };
-
-    function filterArticles(category) {
-      document.querySelectorAll('.article-filter-btn').forEach(btn => {
-        if (btn.dataset.filter === category) {
-          btn.className = 'article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-navy text-white transition';
-        } else {
-          btn.className = 'article-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium bg-brand-cream text-slate-700 border border-brand-lightBorder hover:border-brand-navy transition';
-        }
-      });
-
-      document.querySelectorAll('.article-card').forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-
-    function openArticleModal(id) {
-      const art = articleData[id];
-      if (!art) return;
-      const modal = document.getElementById('articleModal');
-      const container = document.getElementById('articleModalContent');
-
-      container.innerHTML = `
-        <div class="flex items-center gap-2 mb-2">
-          <span class="px-2.5 py-1 rounded bg-brand-terracotta/10 text-brand-terracotta text-xs font-mono font-bold">${art.tag}</span>
-          <span class="text-xs font-mono text-slate-400">• ${art.readTime}</span>
-          <span class="text-xs font-mono text-brand-navy font-semibold">• By ${art.author}</span>
-        </div>
-        <h2 class="font-serif text-3xl sm:text-4xl text-brand-navy leading-tight">${art.title}</h2>
-        <p class="font-serif italic text-lg text-slate-600 border-b border-brand-lightBorder pb-4">${art.lead}</p>
-        <div class="space-y-4 pt-2 font-sans text-base">${art.body}</div>
-        <div class="pt-6 border-t border-brand-lightBorder flex items-center justify-between">
-          <span class="text-xs font-mono text-slate-500">Curated & Written by Alphonce Oyugi</span>
-          <button onclick="closeArticleModal()" class="px-5 py-2 rounded-full bg-brand-navy text-white text-xs font-semibold hover:bg-brand-terracotta transition">Close Essay</button>
-        </div>
-      `;
-      modal.classList.remove('hidden');
-      lucide.createIcons();
-    }
-
-    function closeArticleModal() {
-      document.getElementById('articleModal').classList.add('hidden');
-    }
-
-    // Film Cinema Player System
-    const filmData = {
-      'cold-chain': {
-        title: 'The Cold Trail: Inside the Sub-Zero Race',
-        runtime: '18 minutes',
-        category: 'Field Documentary',
-        credits: 'Curated by Alphonce Oyugi • Directed with Visual Health Media',
-        description: 'Chronicles the journey of motorbike vaccine couriers across rural Kenyan pathways equipped with portable solar loggers. Features live interviews with biomedical engineers, regional nurses, and maternal community groups.',
-        previewImg: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80'
-      },
-      'first-breath': {
-        title: 'First Breath: The Doulas of Nyando',
-        runtime: '26 minutes',
-        category: 'Investigative Cinema',
-        credits: 'Produced in collaboration with Alphonce Oyugi & Frontline Guild',
-        description: 'Examines postpartum hemorrhage reduction in western Kenya through the integration of clinical early warning kits into traditional birthing protocols.',
-        previewImg: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80'
-      },
-      'silent-vectors': {
-        title: 'Silent Vectors: The Water We Do Not See',
-        runtime: '12 minutes',
-        category: 'Animated & Micro-Documentary',
-        credits: 'Data Visualization by Alphonce Oyugi & 3D BioArts Lab',
-        description: 'Combines cellular electron microscopy visualizations with public water quality geospatial sensor logs to show how runoff impacts municipal reservoirs.',
-        previewImg: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80'
-      }
-    };
-
-    function playFilmModal(id) {
-      const film = filmData[id];
-      if (!film) return;
-      const modal = document.getElementById('filmModal');
-      const player = document.getElementById('filmPlayerContainer');
-      const details = document.getElementById('filmModalDetails');
-
-      player.innerHTML = `
-        <div class="relative w-full h-full flex items-center justify-center bg-black">
-          <img src="${film.previewImg}" alt="${film.title}" class="absolute inset-0 w-full h-full object-cover opacity-40">
-          <div class="relative z-10 text-center p-6 space-y-4">
-            <div class="w-16 h-16 rounded-full bg-brand-terracotta text-white flex items-center justify-center mx-auto shadow-2xl animate-pulse">
-              <i data-lucide="play" class="w-8 h-8 fill-current ml-1"></i>
-            </div>
-            <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full inline-block text-xs font-mono text-brand-amber">
-              Simulation Stream • Science Beyond the Paper Media Showcase
-            </div>
-          </div>
-        </div>
-      `;
-
-      details.innerHTML = `
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
-          <div>
-            <span class="text-xs font-mono text-brand-amber uppercase font-semibold">${film.category}</span>
-            <h3 class="font-serif text-2xl text-white font-bold">${film.title}</h3>
-          </div>
-          <span class="text-xs font-mono bg-slate-800 px-3 py-1 rounded text-slate-300">${film.runtime}</span>
-        </div>
-        <p class="text-xs text-brand-terracotta font-mono">${film.credits}</p>
-        <p class="text-sm text-slate-300 leading-relaxed">${film.description}</p>
-      `;
-
-      modal.classList.remove('hidden');
-      lucide.createIcons();
-    }
-
-    function closeFilmModal() {
-      document.getElementById('filmModal').classList.add('hidden');
-    }
-
-    // Case Study Switcher Data & Logic
-    const caseData = {
-      vaccine: {
-        title: 'Study: "Multivariate Regression Analysis of Last-Mile Cold Chain Temperature Deviations"',
-        academicHead: '"Evaluating Ambient Heat Stress on Attenuation of Lyophilized Measles-Rubella Antigens in Semi-Arid Sub-Saharan Corridors"',
-        academicSnippet: 'Using Cox proportional hazards modeling (HR 1.84, 95% CI 1.32–2.56, p < 0.001), cold storage outages exceeding 3.5 hours corresponded to a 41.2% decrement in viable titer retention across tertiary depots (n=142).',
-        transformedHead: '"The 4-Hour Miracle: Keeping Africa\'s Vaccines Cool"',
-        tag: 'Mini-Documentary & Field Brief',
-        titleField: "Follow Nurse Amina's 42km motorcycle journey",
-        descField: "Shows exactly why solar refrigerators protect 18,000 children per district while explaining the statistical safety margin simply."
-      },
-      maternal: {
-        title: 'Study: "Longitudinal Quasi-Experimental Evaluation of Community Doula Interventions on Postpartum Hemorrhage"',
-        academicHead: '"Risk Ratio Modulations and Attributable Fraction Estimates for Skilled Birth Attendance in Low-Resource District Clinics"',
-        academicSnippet: 'Poisson generalized estimating equations indicated an adjusted relative risk (aRR) of 0.62 (95% CI: 0.48, 0.79) for acute hemorrhagic episodes post-implementation across 18 clusters over a 36-month timeline.',
-        transformedHead: '"Mothers Returning Home: The Power of Community Care"',
-        tag: 'Interactive Audio Series & Visual Toolkit',
-        titleField: "Local Doulas + Visual Birth Planning Charts",
-        descField: "Translates complex blood volume indicators into clear warning sign guides for husbands and community elders, cutting delay to clinic by 64%."
-      }
-    };
-
-    function switchCase(type) {
-      const btnVaccine = document.getElementById('tabVaccine');
-      const btnMaternal = document.getElementById('tabMaternal');
-      const d = caseData[type];
-
-      if (type === 'vaccine') {
-        btnVaccine.className = 'px-4 py-2 text-xs font-semibold rounded-lg bg-brand-navy text-white transition shadow-sm';
-        btnMaternal.className = 'px-4 py-2 text-xs font-semibold rounded-lg text-slate-600 hover:text-brand-navy transition';
-      } else {
-        btnMaternal.className = 'px-4 py-2 text-xs font-semibold rounded-lg bg-brand-navy text-white transition shadow-sm';
-        btnVaccine.className = 'px-4 py-2 text-xs font-semibold rounded-lg text-slate-600 hover:text-brand-navy transition';
-      }
-
-      document.getElementById('caseTitle').innerText = d.title;
-      document.getElementById('academicHeadline').innerText = d.academicHead;
-      document.getElementById('academicSnippet').innerHTML = `
-        <p><strong>Abstract Extract:</strong> ${d.academicSnippet}</p>
-        <p class="text-slate-400"><em>Peer-reviewed quantitative dataset.</em></p>
-      `;
-      document.getElementById('transformedHeadline').innerText = d.transformedHead;
-    }
-
-    // Role selection dynamic messaging
-    const roleTips = {
-      researcher: 'As a Researcher, you will receive our "Translation Primer" and invitations to pair with documentarians and design studios.',
-      creative: 'As a Creative (Filmmaker/Designer), you will be matched with funded scientific labs to co-produce impactful documentaries and visual tools.',
-      journalist: 'As a Journalist, you gain early access to embargoed plain-language scientific briefings and direct researcher interview lines.',
-      policymaker: 'As a Policymaker, you will receive actionable 1-page evidence syntheses tailored to your legislative and budgetary priorities.',
-      funder: 'As a Funder or Institution, you can sponsor translational cohorts to demonstrate the measurable human return of your research investments.',
-      community: 'As a Community Champion, your lived experience guides our storytelling ensuring scientific projects remain respectful and culturally resonant.'
-    };
-
-    function selectRole(button, roleKey) {
-      document.querySelectorAll('.role-btn').forEach(btn => {
-        btn.classList.remove('bg-brand-navy', 'text-white');
-        btn.classList.add('text-slate-700', 'bg-white');
-      });
-      button.classList.add('bg-brand-navy', 'text-white');
-      button.classList.remove('text-slate-700', 'bg-white');
-      
-      document.getElementById('selectedRoleInput').value = roleKey;
-      document.getElementById('roleTipText').innerText = roleTips[roleKey] || roleTips.researcher;
-    }
-
-    // Audio Simulator Toggle
-    let isPlaying = false;
-    let playInterval;
-    let seconds = 0;
-
-    function toggleManifestoAudio() {
-      isPlaying = !isPlaying;
-      const playIcon = document.getElementById('playIcon');
-      const audioStateText = document.getElementById('audioStateText');
-      const soundWaves = document.getElementById('soundWaves');
-      const playerTimer = document.getElementById('playerTimer');
-      const bars = soundWaves.querySelectorAll('.wave-bar');
-
-      if (isPlaying) {
-        playIcon.setAttribute('data-lucide', 'pause');
-        audioStateText.innerText = 'Manifesto Playing...';
-        audioStateText.classList.add('text-brand-terracotta');
-        bars.forEach(bar => {
-          bar.classList.add('bg-brand-terracotta');
-          bar.classList.remove('bg-slate-300');
-        });
-
-        playInterval = setInterval(() => {
-          seconds++;
-          const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
-          const secs = (seconds % 60).toString().padStart(2, '0');
-          playerTimer.innerText = `${mins}:${secs} / 05:00`;
-          if (seconds >= 300) {
-            toggleManifestoAudio();
-          }
-        }, 1000);
-      } else {
-        playIcon.setAttribute('data-lucide', 'play');
-        audioStateText.innerText = 'Paused';
-        audioStateText.classList.remove('text-brand-terracotta');
-        clearInterval(playInterval);
-        bars.forEach(bar => {
-          bar.classList.remove('bg-brand-terracotta');
-          bar.classList.add('bg-slate-300');
-        });
-      }
-      lucide.createIcons();
-    }
-
-    // Form submission handler
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      const form = document.getElementById('actionForm');
-      const successBox = document.getElementById('formSuccessMessage');
-      
-      form.classList.add('opacity-50', 'pointer-events-none');
-      setTimeout(() => {
-        form.classList.add('hidden');
-        successBox.classList.remove('hidden');
-        lucide.createIcons();
-      }, 700);
-    }
-
-    // Blueprint Download Mock
-    function downloadToolkit() {
-      const blueprintText = `SCIENCE BEYOND THE PAPER: INITIATIVE BLUEPRINT
-=====================================================
-Vision: Building a stronger bridge between global health evidence and the public.
-
-Key Pillars:
-1. Scientific Rigor Maintained: Co-designing narratives with principal investigators.
-2. Interdisciplinary Pods: Pairing researchers with filmmakers, visual artists, and educators.
-3. Advocacy Beyond the Budget Line: Demonstrating the real human outcomes of global health grants.
-4. Community Empowerment: Turning passive recipients into informed participants.
-
-Contact & Movement Hub: Science Beyond the Paper Initiative.`;
-
-      const blob = new Blob([blueprintText], { type: 'text/plain;charset=utf-8' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'Science-Beyond-The-Paper-Blueprint.txt';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-  </script>
-</body>
-</html>
+          <p class="leading-relaxed text-slate
